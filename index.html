@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
-  <title>One-Pager nur mit CSS - 4</title>
+  <title>MinimalBlue</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
   <style>
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono|VT323&display=swap');
@@ -37,8 +37,8 @@ section {
 	left: 0;
 	z-index: 99;	
 	margin: 0;
-	padding: 1em;
-	width: 100%;
+	padding: 1em 0;
+	/*width: 100%;*/
 	list-style: none;
 	background: linear-gradient(to bottom, rgba(34,34,34,0.5) 0%,rgba(34,34,34,0) 100%); 
 }
@@ -47,7 +47,7 @@ section {
 	float: left;
 	text-align: center;
 	margin: 0;
-	margin: 0 0 0 1em;
+	padding: 0 0 0 1em;
 }
 
 #navigation li a, #navigation li a:link, #navigation li a:visited {
@@ -76,22 +76,15 @@ section {
 }
 */ 
 
-
-
-
-
+ 
+section {
+	margin: 0em auto;  
+}
+ 
 section h2 {
 	margin-top: 0;
 	padding-top: 0;
-}
- 
-section * {
-  max-width: 50em;
-  margin: 0.5em auto;  
-}
- 
-section h2 {
-	font-size: 4em;
+	font-size: 3em;
 	text-align: left;
 	line-height: 2rem;
 }
@@ -127,7 +120,7 @@ section p {
     animation: background-5 15s infinite;
 }
  
- 
+ /*
 @media screen and (min-width: 641px) {
 	section h2 {
 		font-size: 2em;
@@ -152,16 +145,16 @@ section p {
 		margin: 0;
 	}
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  /*right: 20%;*/
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-}
+	.vertical-center {
+	  margin: 0;
+	  position: absolute;
+	  top: 50%;
+	  left: 10%;
+	  /*right: 20%;*/
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	}
+}*/
 
 @keyframes background-1 {
     0% { background-color: #0B94C1; }
@@ -245,12 +238,12 @@ section p {
 	  <li>S. Calzavara, R. Focardi, M. Maffei, C. Schneidewind, M. Squarcina, M. Tempesta. <strong>WPSE: Fortifying Web Protocols via Browser-Side Security Monitoring</strong>. In the proceedings of USENIX Security. 2018. <a href="https://arxiv.org/pdf/1806.09111.pdf">arXiv</a> <a href="/assets/data/papers/USESEC18_wpse.pdf">pdf</a> <a href="/assets/data/papers/USESEC18_wpse-slides.pdf">slides</a></li>
 	  <li>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta. <strong>Surviving the Web: A Journey into Web Session Security (extended abstract)</strong>. The Web Conference (Journal Track). 2018 . Full version <a href="/assets/data/papers/CSUR17_surviving_the_web.pdf">pdf</a></li>
 	  <li>R. Focardi, F. Palmarini, G. Steel, M. Squarcina, M. Tempesta. <strong>Mind Your Keys? A Security Evaluation of Java Keystores</strong>. In the proceedings of The Network and Distributed System Security Symposium (NDSS 2018). 2018. <a href="/assets/data/papers/NDSS2018_mind_your_keys.pdf">pdf</a> <a href="/assets/data/papers/NDSS2018_mind_your_keys-slides.pdf">slides</a> <a href="https://www.youtube.com/watch?v=JtFJuxRC56s">video</a></li>
-<!-- 	  <li>R. Focardi, M. Squarcina. <strong>Run-time Attack Detection in Cryptographic APIs</strong>. In the proceedings of the 30th Computer Security Foundations Symposium (CSF 2017). 2017. <a href="/assets/data/papers/CSF17_runtime_attack_detection_crypto_api.pdf">pdf</a> <a href="/assets/data/papers/CSF17_runtime_attack_detection_crypto_api-slides.pdf">slides</a></li>
+	  <li>R. Focardi, M. Squarcina. <strong>Run-time Attack Detection in Cryptographic APIs</strong>. In the proceedings of the 30th Computer Security Foundations Symposium (CSF 2017). 2017. <a href="/assets/data/papers/CSF17_runtime_attack_detection_crypto_api.pdf">pdf</a> <a href="/assets/data/papers/CSF17_runtime_attack_detection_crypto_api-slides.pdf">slides</a></li>
 	  <li>S. Das, R. Focardi, F. Luccio, E. Markou, D. Moro, M. Squarcina. Gathering of Robots in a Ring with Mobile Faults. In the proceedings of the 17th Italian Conference on Theoretical Computer Science (ICTCS 2016). 2016. <a href="/assets/data/papers/ICTCS2016_gathering_of_robots_in_a_ring_with_mobile_faults.pdf">pdf</a></li>
 	  <li>R. Focardi, F. Luccio, M. Squarcina. Fast SQL Blind Injections in High Latency Networks. In the proceedings of the 1st AESS European Conference on Satellite Telecommunications, Security and Privacy Special Track (ESTEL 2012). 2012. <a href="/assets/data/papers/ESTEL12_fast_SQL_blind_injections_in_high_latency_networks.pdf">pdf</a></li>
-	  <li>M. Bugliesi, S. Calzavara, R. Focardi, M. Squarcina. <strong>Gran: model checking grsecurity RBAC policies</strong>. In the proceedings of the 25th Computer Security Foundations Symposium (CSF 2012). 2012. <a href="/assets/data/papers/CSF12_gran_model_checking_grsecurity_RBAC_policies.pdf">pdf</a></li> -->
+	  <li>M. Bugliesi, S. Calzavara, R. Focardi, M. Squarcina. <strong>Gran: model checking grsecurity RBAC policies</strong>. In the proceedings of the 25th Computer Security Foundations Symposium (CSF 2012). 2012. <a href="/assets/data/papers/CSF12_gran_model_checking_grsecurity_RBAC_policies.pdf">pdf</a></li>
 	</ul>
-<!-- 	<h3 id="journals">Journals</h3>
+	<h3 id="journals">Journals</h3>
 
 	<ul>
 	  <li>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta. <strong>Surviving the Web: A Journey into Web Session Security</strong>. ACM Computing Surveys (CSUR). 2017. Pre-print version: <a href="/assets/data/papers/CSUR17_surviving_the_web.pdf">pdf</a></li>
@@ -260,7 +253,7 @@ section p {
 
 	<ul>
 	  <li>G. Caiazza, R. Focardi, M. Squarcina. Run-time analysis of PKCS#11 attacks. In the proceedings of the 8th International Workshop on Analysis of Security APIs (ASA-8). 2015. <a href="/assets/data/papers/ASA8_run-time_analysis_of_PKCS11_attacks.pdf">pdf</a></li>
-	</ul> -->
+	</ul>
 	</div>
   	</section>
 
