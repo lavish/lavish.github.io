@@ -1,1 +1,319 @@
-Hello World
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
+  <title>One-Pager nur mit CSS - 4</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	font-family: 'Roboto Mono', monospace;
+
+}
+
+a, a:active, a:hover, a:enabled {
+	text-decoration: none;
+	color: inherit;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 2px;
+	padding: 2px 2px;
+}
+
+section {
+	font-size: 1.2em;
+}
+
+
+#navigation {
+	position: fixed;
+	top: 0; 
+	left: 0;
+	z-index: 99;	
+	margin: 0;
+	padding: 1em;
+	width: 100%;
+	list-style: none;
+}
+
+#navigation li {
+	float: left;
+	text-align: center;
+	margin: 0;
+	margin: 0 0 0 1em;
+}
+
+#navigation li a, #navigation li a:link, #navigation li a:visited {
+	text-decoration: none;
+	display: block;
+	font-weight:bold;
+	padding: 0.2em 1em;	
+}
+
+#navigation li a:hover, #navigation li a:focus, #navigation li a:active {
+
+}
+ 
+
+/*.st-container > input:checked + label,
+.st-container > input:checked:hover + label{
+	background: #222;
+	color: #ffffff;
+	text-decoration: line-through;
+}
+ 
+.st-container > input:hover + label,
+.st-container > input:focus + label{
+	background: #222;
+	color: #ffffff;
+}
+*/ 
+
+
+main,
+section {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background: black;
+}
+
+
+section h2 {
+	margin-top: 0;
+	padding-top: 0;
+}
+ 
+section * {
+  max-width: 50em;
+  margin: 0.5em auto;  
+}
+ 
+section h2 {
+	font-size: 4em;
+	text-align: left;
+	line-height: 2rem;
+}
+
+section p {	
+	text-align: justify;
+}
+ 
+/* Colored sections */
+ 
+#part_1{
+	background: #0B94C1;
+    animation: background-1 15s infinite;
+}
+ 
+#part_2{
+	background: #0866A5;
+    animation: background-2 15s infinite;
+}
+ 
+#part_3{
+	background: #254189;
+    animation: background-3 15s infinite;
+}
+
+#part_4 { 
+	background: #5C27A6;
+    animation: background-4 15s infinite;
+}
+
+#part_5 {
+	background: #7D00BC;
+    animation: background-5 15s infinite;
+}
+ 
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  /*right: 20%;*/
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+ 
+@media screen and (max-width: 32em) {
+	section h2 {
+		font-size: 2em;
+	}
+ 
+	section p {
+		width: 90%;
+		left: 5%;
+		margin-top: 0;
+	}
+ 
+}
+
+@keyframes background-1 {
+    0% { background-color: #0B94C1; }
+    20% { background-color: #0866A5; }  
+    40% { background-color: #254189; }
+    60% { background-color: #5C27A6; }
+    80% { background-color: #7D00BC; }
+    100% { background-color: #0B94C1; }
+}
+
+@keyframes background-2 {
+    0% { background-color: #0866A5; }  
+    20% { background-color: #254189; }
+    40% { background-color: #5C27A6; }
+    60% { background-color: #7D00BC; }
+    80% { background-color: #0B94C1; }
+    100% { background-color: #0866A5; }
+}
+
+@keyframes background-3 {
+    0% { background-color: #254189; }
+    20% { background-color: #5C27A6; }
+    40% { background-color: #7D00BC; }
+    60% { background-color: #0B94C1; }
+    80% { background-color: #0866A5; }  
+    100% { background-color: #254189; }
+}
+
+@keyframes background-4 {
+    0% { background-color: #5C27A6; }
+    20% { background-color: #7D00BC; }
+    40% { background-color: #0B94C1; }
+    60% { background-color: #0866A5; }  
+    80% { background-color: #254189; }
+    100% { background-color: #5C27A6; }
+}
+
+@keyframes background-5 {
+    0% { background-color: #7D00BC; }
+    20% { background-color: #0B94C1; }
+    40% { background-color: #0866A5; }  
+    60% { background-color: #254189; }
+    80% { background-color: #5C27A6; }
+    100% { background-color: #7D00BC; }
+}
+
+  </style>
+</head>
+ 
+<body>
+ 
+<!--   <input name="radio-set" id="st-control-1" type="radio">
+  <label for id="st-control-1"><a href="#part_1"><span>About</span></a></label>
+  <input name="radio-set" id="st-control-2" type="radio">
+  <label for id="st-control-2"><a href="#part_2"><span>Research</span></a></label>
+  <input name="radio-set" id="st-control-3" type="radio">
+  <label for id="st-control-3"><a href="#part_3"><span>Vulnerabilities</span></a></label>
+  <input name="radio-set" id="st-control-4" type="radio">
+  <label for id="st-control-4"><a href="#part_4"><span>Teaching</span></a></label>
+  <input name="radio-set" id="st-control-5" type="radio">
+  <label for id="st-control-5"><a href="#part_5"><span>Music</span></a></label>
+ -->
+  <main>
+ 
+  	<section id="part_1">
+  		<div class="vertical-center">
+  		<h2>Hi there!</h2>
+	    <p>I’m Marco Squarcina, also known as lavish if we met online. I’m a Postdoctoral Researcher focused mainly on web security at <a href="https://secpriv.tuwien.ac.at">TU Wien</a>. I’m passionate about computer security and hacking in its broadest sense. I play and organise <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">CTFs</a> as a proud member of <a href="https://secgroup.github.io/">c00kies@venice</a> and <a href="https://mhackeroni.it">mhackeroni</a>. For a couple of years I’ve been made the coach of the national cybersecurity team in Italy for the <a href="https://ecsc.eu/">European Cyber Security Challenge</a> project. Feel free to drop me a <a href="mailto:replace_with_lastname@gmail.com">mail</a> if you want to get in touch! My <a href="/assets/data/pubkey.asc">PGP key</a> is here if needed.</p>
+	</div>
+  	</section>
+ 
+  	<section id="part_2">
+  		<div class="vertical-center">
+
+	  <h2>Publications</h2>
+	<h3 id="conferences">Conferences</h3>
+
+	<ul>
+	  <li>S. Calzavara, R. Focardi, M. Nemec, A. Rabitti, M. Squarcina. <strong>Postcards from the Post-HTTP World:
+	Amplification of HTTPS Vulnerabilities in the Web Ecosystem</strong>. To appear in the proceedings of IEEE Symposium on Security and Privacy (S&amp;P). 2019. <a href="/assets/data/papers/SP19_postcards_from_the_post_HTTP_world.pdf">pdf</a></li>
+	  <li>S. Calzavara, R. Focardi, M. Maffei, C. Schneidewind, M. Squarcina, M. Tempesta. <strong>WPSE: Fortifying Web Protocols via Browser-Side Security Monitoring</strong>. In the proceedings of USENIX Security. 2018. <a href="https://arxiv.org/pdf/1806.09111.pdf">arXiv</a> <a href="/assets/data/papers/USESEC18_wpse.pdf">pdf</a> <a href="/assets/data/papers/USESEC18_wpse-slides.pdf">slides</a></li>
+	  <li>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta. <strong>Surviving the Web: A Journey into Web Session Security (extended abstract)</strong>. The Web Conference (Journal Track). 2018 . Full version <a href="/assets/data/papers/CSUR17_surviving_the_web.pdf">pdf</a></li>
+	  <li>R. Focardi, F. Palmarini, G. Steel, M. Squarcina, M. Tempesta. <strong>Mind Your Keys? A Security Evaluation of Java Keystores</strong>. In the proceedings of The Network and Distributed System Security Symposium (NDSS 2018). 2018. <a href="/assets/data/papers/NDSS2018_mind_your_keys.pdf">pdf</a> <a href="/assets/data/papers/NDSS2018_mind_your_keys-slides.pdf">slides</a> <a href="https://www.youtube.com/watch?v=JtFJuxRC56s">video</a></li>
+<!-- 	  <li>R. Focardi, M. Squarcina. <strong>Run-time Attack Detection in Cryptographic APIs</strong>. In the proceedings of the 30th Computer Security Foundations Symposium (CSF 2017). 2017. <a href="/assets/data/papers/CSF17_runtime_attack_detection_crypto_api.pdf">pdf</a> <a href="/assets/data/papers/CSF17_runtime_attack_detection_crypto_api-slides.pdf">slides</a></li>
+	  <li>S. Das, R. Focardi, F. Luccio, E. Markou, D. Moro, M. Squarcina. Gathering of Robots in a Ring with Mobile Faults. In the proceedings of the 17th Italian Conference on Theoretical Computer Science (ICTCS 2016). 2016. <a href="/assets/data/papers/ICTCS2016_gathering_of_robots_in_a_ring_with_mobile_faults.pdf">pdf</a></li>
+	  <li>R. Focardi, F. Luccio, M. Squarcina. Fast SQL Blind Injections in High Latency Networks. In the proceedings of the 1st AESS European Conference on Satellite Telecommunications, Security and Privacy Special Track (ESTEL 2012). 2012. <a href="/assets/data/papers/ESTEL12_fast_SQL_blind_injections_in_high_latency_networks.pdf">pdf</a></li>
+	  <li>M. Bugliesi, S. Calzavara, R. Focardi, M. Squarcina. <strong>Gran: model checking grsecurity RBAC policies</strong>. In the proceedings of the 25th Computer Security Foundations Symposium (CSF 2012). 2012. <a href="/assets/data/papers/CSF12_gran_model_checking_grsecurity_RBAC_policies.pdf">pdf</a></li> -->
+	</ul>
+<!-- 	<h3 id="journals">Journals</h3>
+
+	<ul>
+	  <li>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta. <strong>Surviving the Web: A Journey into Web Session Security</strong>. ACM Computing Surveys (CSUR). 2017. Pre-print version: <a href="/assets/data/papers/CSUR17_surviving_the_web.pdf">pdf</a></li>
+	</ul>
+
+	<h3 id="workshops">Workshops</h3>
+
+	<ul>
+	  <li>G. Caiazza, R. Focardi, M. Squarcina. Run-time analysis of PKCS#11 attacks. In the proceedings of the 8th International Workshop on Analysis of Security APIs (ASA-8). 2015. <a href="/assets/data/papers/ASA8_run-time_analysis_of_PKCS11_attacks.pdf">pdf</a></li>
+	</ul> -->
+	</div>
+  	</section>
+
+
+  	<section id="part_3">
+  		  		<div class="vertical-center">
+  		<h2>Teaching</h2>
+		<ul>
+		  <li><a href="https://secgroup.dais.unive.it/teaching/security-course/">Security 1 [CM0475], Security 2 [CM0494] (A.Y. 2015/16 - 2017/18)</a></li>
+		  <li>Security of Computer Systems [CM0288] (A.Y. 2013/14 - 2014/15)</li>
+		</ul>
+	</div>
+  	</section>
+
+
+  	<section id="part_4">
+  		<div class="vertical-center">
+
+  		<h2>Vulnerabilities</h2>
+
+		<h3 id="cves">CVEs</h3>
+
+		<ul>
+		  <li><a href="https://www.oracle.com/technetwork/topics/security/cpuapr2018-3678067.html">CVE-2018-2794</a>, Oracle Java, CVSS 3.0 Base Score 7.7 (HIGH)</li>
+		  <li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10356</a>, Oracle Java, CVSS 3.0 Base Score 6.2 (MEDIUM)</li>
+		  <li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10345</a>, Oracle Java, CVSS 3.0 Base Score 3.1 (LOW)</li>
+		</ul>
+
+		<h3 id="misc">Misc</h3>
+
+		<ul>
+		  <li><a href="https://gsuiteupdates.googleblog.com/2018/04/more-secure-sign-in-chrome.html">SAML2.0, Login CSRF on Google</a></li>
+		</ul>
+		</div>
+  	</section>
+  
+  	<section id="part_5">
+  		  		  		<div class="vertical-center">
+
+  		<h2>Music</h2>
+  		<p>Todo</p>
+ </div>
+  	</section>
+ 
+  </main>
+
+  <nav>	
+	<ul id="navigation">
+		<li><a href="#part_1">About</a></li>
+		<li><a href="#part_2">Research</a></li>
+		<li><a href="#part_3">Teaching</a></li>
+		<li><a href="#part_4">Vulns</a></li>
+		<li><a href="#part_5">Music</a></li>
+	</ul>
+</nav>
+ 
+</body>
+</html>
