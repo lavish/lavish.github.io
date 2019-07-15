@@ -1,228 +1,195 @@
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
-  <title>MinimalBlue</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <style>
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono|VT323&display=swap');
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+	<title>MinimalBlue</title>
+	<meta name="author" content="Marco Squarcina">
+	<meta name="description" content="Marco Squarcina personal website">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Titillium+Web&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<style>
+		html, body {
+		    height: 100%;
+			margin: 0;
+			padding: 0;
+			color: #eee;
+			font-family: 'Titillium Web', sans-serif;
+		}
 
-html, body {
-    height: 100%;
-	margin: 0;
-	padding: 0;
-	color: #eee;
-	font-family: 'VT323', monospace;
+		a, a:active, a:hover, a:enabled {
+			color: inherit;
+			background-color: rgba(255, 255, 255, 0.05);
+			border-radius: 3px;
+			padding: 0.1em 0.2em;
+			text-decoration: underline;
+		}
 
-}
+		nav {
+			text-align: center;
+			font-family: 'Major Mono Display', monospace;
+		}
 
-a, a:active, a:hover, a:enabled {
-	text-decoration: none;
-	color: inherit;
-	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 3px;
-	padding: 2px;
-}
+		#navigation {
+			position: fixed;
+			top: 0; 
+			left: 0;
+			z-index: 99;	
+			margin: 0 auto;
+			padding: 1em 10% 0 10%;
+			width: 100%;
+			min-height: 3%;
+			list-style: none;
+			text-align: left;
+			background: linear-gradient(to bottom, rgba(34,34,34,0.7) 0%, rgba(34,34,34,0) 100%); 
+		}
 
-section {
-	font-size: 1em;
-}
+		#navigation li {
+			float: left;
+			text-align: center;
+			margin: 0;
+			padding: 0 1em 0 0;
+		}
 
+		#navigation li a, #navigation li a:link, #navigation li a:visited {
+			text-decoration: none;
+			display: block;
+			font-weight: bold;
+			padding: 0;
+			margin: 0;
+			font-size: 1.5em;
+			background: none;
+		}
 
-#navigation {
-	position: fixed;
-	top: 0; 
-	left: 0;
-	z-index: 99;	
-	margin: 0;
-	padding: 1em 0;
-	/*width: 100%;*/
-	list-style: none;
-	background: linear-gradient(to bottom, rgba(34,34,34,0.5) 0%,rgba(34,34,34,0) 100%); 
-}
+		#navigation li a:hover, #navigation li a:focus, #navigation li a:active {
+			text-decoration: underline;
+		}
 
-#navigation li {
-	float: left;
-	text-align: center;
-	margin: 0;
-	padding: 0 0 0 1em;
-}
+		main,
+		section {
+			position: relative;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			background: black;
+			overflow: scroll;
+		}
 
-#navigation li a, #navigation li a:link, #navigation li a:visited {
-	text-decoration: none;
-	display: block;
-	font-weight:bold;
-	padding: 0.2em 1em;	
-}
+		section {
+			width: 80%;
+			margin: 0 auto;
+			padding: 10%;
+			font-size: 1.4em;
+			line-height: 1.5em;
+			display: table;
+		}
 
-#navigation li a:hover, #navigation li a:focus, #navigation li a:active {
+		.vertical-center {
+			display: table-cell; vertical-align: middle;
+		}
 
-}
- 
+		section h2 {
+			font-family: 'Major Mono Display', monospace;
+			margin-top: 1em;
+			padding-top: 0;
+			font-size: 1.5em;
+			text-align: left;
+			line-height: 2rem;
+		}
 
-/*.st-container > input:checked + label,
-.st-container > input:checked:hover + label{
-	background: #222;
-	color: #ffffff;
-	text-decoration: line-through;
-}
- 
-.st-container > input:hover + label,
-.st-container > input:focus + label{
-	background: #222;
-	color: #ffffff;
-}
-*/ 
+		section p {	
+			text-align: justify;
+		}
 
- 
-section {
-	margin: 0em auto;  
-}
- 
-section h2 {
-	margin-top: 0;
-	padding-top: 0;
-	font-size: 3em;
-	text-align: left;
-	line-height: 2rem;
-}
+		@media only screen and (min-width : 768px) {
+			section h2 {
+				font-size: 2em;
+			}
+		}
+		 
+		#part_1{
+			background: #0B94C1;
+		    animation: background-1 15s infinite;
+		}
+		 
+		#part_2{
+			background: #0866A5;
+		    animation: background-2 15s infinite;
+		}
+		 
+		#part_3{
+			background: #254189;
+		    animation: background-3 15s infinite;
+		}
 
-section p {	
-	text-align: justify;
-}
- 
-/* Colored sections */
- 
-#part_1{
-	background: #0B94C1;
-    animation: background-1 15s infinite;
-}
- 
-#part_2{
-	background: #0866A5;
-    animation: background-2 15s infinite;
-}
- 
-#part_3{
-	background: #254189;
-    animation: background-3 15s infinite;
-}
+		#part_4 { 
+			background: #5C27A6;
+		    animation: background-4 15s infinite;
+		}
 
-#part_4 { 
-	background: #5C27A6;
-    animation: background-4 15s infinite;
-}
+		#part_5 {
+			background: #7D00BC;
+		    animation: background-5 15s infinite;
+		}
 
-#part_5 {
-	background: #7D00BC;
-    animation: background-5 15s infinite;
-}
- 
- /*
-@media screen and (min-width: 641px) {
-	section h2 {
-		font-size: 2em;
-	}
- 	main,
-	section {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		padding: 0;
-		margin: 0;
-		background: black;
-	}
-	section {
-		font-size: 1.5em;
-		line-height: 1.5em;
-	}
+		@keyframes background-1 {
+		    0% { background-color: #0B94C1; }
+		    20% { background-color: #0866A5; }  
+		    40% { background-color: #254189; }
+		    60% { background-color: #5C27A6; }
+		    80% { background-color: #7D00BC; }
+		    100% { background-color: #0B94C1; }
+		}
 
-	section p {
-		width: 100%;
-		left: 0;
-		margin: 0;
-	}
+		@keyframes background-2 {
+		    0% { background-color: #0866A5; }  
+		    20% { background-color: #254189; }
+		    40% { background-color: #5C27A6; }
+		    60% { background-color: #7D00BC; }
+		    80% { background-color: #0B94C1; }
+		    100% { background-color: #0866A5; }
+		}
 
-	.vertical-center {
-	  margin: 0;
-	  position: absolute;
-	  top: 50%;
-	  left: 10%;
-	  /*right: 20%;*/
-	  -ms-transform: translateY(-50%);
-	  transform: translateY(-50%);
-	}
-}*/
+		@keyframes background-3 {
+		    0% { background-color: #254189; }
+		    20% { background-color: #5C27A6; }
+		    40% { background-color: #7D00BC; }
+		    60% { background-color: #0B94C1; }
+		    80% { background-color: #0866A5; }  
+		    100% { background-color: #254189; }
+		}
 
-@keyframes background-1 {
-    0% { background-color: #0B94C1; }
-    20% { background-color: #0866A5; }  
-    40% { background-color: #254189; }
-    60% { background-color: #5C27A6; }
-    80% { background-color: #7D00BC; }
-    100% { background-color: #0B94C1; }
-}
+		@keyframes background-4 {
+		    0% { background-color: #5C27A6; }
+		    20% { background-color: #7D00BC; }
+		    40% { background-color: #0B94C1; }
+		    60% { background-color: #0866A5; }  
+		    80% { background-color: #254189; }
+		    100% { background-color: #5C27A6; }
+		}
 
-@keyframes background-2 {
-    0% { background-color: #0866A5; }  
-    20% { background-color: #254189; }
-    40% { background-color: #5C27A6; }
-    60% { background-color: #7D00BC; }
-    80% { background-color: #0B94C1; }
-    100% { background-color: #0866A5; }
-}
-
-@keyframes background-3 {
-    0% { background-color: #254189; }
-    20% { background-color: #5C27A6; }
-    40% { background-color: #7D00BC; }
-    60% { background-color: #0B94C1; }
-    80% { background-color: #0866A5; }  
-    100% { background-color: #254189; }
-}
-
-@keyframes background-4 {
-    0% { background-color: #5C27A6; }
-    20% { background-color: #7D00BC; }
-    40% { background-color: #0B94C1; }
-    60% { background-color: #0866A5; }  
-    80% { background-color: #254189; }
-    100% { background-color: #5C27A6; }
-}
-
-@keyframes background-5 {
-    0% { background-color: #7D00BC; }
-    20% { background-color: #0B94C1; }
-    40% { background-color: #0866A5; }  
-    60% { background-color: #254189; }
-    80% { background-color: #5C27A6; }
-    100% { background-color: #7D00BC; }
-}
-
+		@keyframes background-5 {
+		    0% { background-color: #7D00BC; }
+		    20% { background-color: #0B94C1; }
+		    40% { background-color: #0866A5; }  
+		    60% { background-color: #254189; }
+		    80% { background-color: #5C27A6; }
+		    100% { background-color: #7D00BC; }
+		}
   </style>
 </head>
  
 <body>
  
-<!--   <input name="radio-set" id="st-control-1" type="radio">
-  <label for id="st-control-1"><a href="#part_1"><span>About</span></a></label>
-  <input name="radio-set" id="st-control-2" type="radio">
-  <label for id="st-control-2"><a href="#part_2"><span>Research</span></a></label>
-  <input name="radio-set" id="st-control-3" type="radio">
-  <label for id="st-control-3"><a href="#part_3"><span>Vulnerabilities</span></a></label>
-  <input name="radio-set" id="st-control-4" type="radio">
-  <label for id="st-control-4"><a href="#part_4"><span>Teaching</span></a></label>
-  <input name="radio-set" id="st-control-5" type="radio">
-  <label for id="st-control-5"><a href="#part_5"><span>Music</span></a></label>
- -->
+
   <main>
  
   	<section id="part_1">
   		<div class="vertical-center">
-  		<h2>Hi there!</h2>
-	    <p>I’m Marco Squarcina, also known as lavish if we met online. I’m a Postdoctoral Researcher focused mainly on web security at <a href="https://secpriv.tuwien.ac.at">TU Wien</a>. I’m passionate about computer security and hacking in its broadest sense. I play and organise <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">CTFs</a> as a proud member of <a href="https://secgroup.github.io/">c00kies@venice</a> and <a href="https://mhackeroni.it">mhackeroni</a>. For a couple of years I’ve been made the coach of the national cybersecurity team in Italy for the <a href="https://ecsc.eu/">European Cyber Security Challenge</a> project. Feel free to drop me a <a href="mailto:replace_with_lastname@gmail.com">mail</a> if you want to get in touch! My <a href="/assets/data/pubkey.asc">PGP key</a> is here if needed.</p>
+  		<h2>Hi there</h2>
+	    <p>My name is Marco Squarcina, I'm a postdoctoral researcher at <a href="https://secpriv.tuwien.ac.at">TU Wien</a>. My research interests focus on web security, but I’m passionate about computer security and hacking in its broadest sense. I play and organise <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">CTFs</a> as a founding member of <a href="https://mhackeroni.it">mhackeroni</a> and <a href="https://secgroup.github.io/">c00kies</a>. Before relocating to Austria I served as a coach for the national cybersecurity team in Italy to compete in the ENISA <a href="https://ecsc.eu/">European Cyber Security Challenge</a>.</p>
+	    <p>The best way to get in touch with me is by <a href="mailto:marco.squarcina@tuwien.ac.at">e-mail</a>. Please use my <a href="/data/pubkey.asc">PGP key</a> if you need to send sensitive data. You can also reach me by phone at +43 (1) 58801-192607, or in my office at Favoritenstrasse 9-11, Stiege 2, 1. Stock, 1040 Wien.</p>
 	</div>
   	</section>
  
@@ -272,7 +239,7 @@ section p {
   	<section id="part_4">
   		<div class="vertical-center">
 
-  		<h2>Vulnerabilities</h2>
+  		<h2>Vulns</h2>
 
 		<h3 id="cves">CVEs</h3>
 
@@ -302,11 +269,11 @@ section p {
 
   <nav>	
 	<ul id="navigation">
-		<li><a href="#part_1">About</a></li>
-		<li><a href="#part_2">Research</a></li>
-		<li><a href="#part_3">Teaching</a></li>
-		<li><a href="#part_4">Vulns</a></li>
-		<li><a href="#part_5">Music</a></li>
+		<li><a href="#part_1" class="fas fa-child" alt="About"></a></li>
+		<li><a href="#part_2" class="fas fa-flask" alt="Research"></a></li>
+		<li><a href="#part_3" class="fas fa-chalkboard-teacher" alt="Teaching"></a></li>
+		<li><a href="#part_4" class="fas fa-bug" alt="Vulnerabilities"></a></li>
+		<li><a href="#part_5" class="fas fa-music" alt="Music"></a></li>
 	</ul>
 </nav>
  
