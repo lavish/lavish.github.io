@@ -26,6 +26,11 @@
 			text-decoration: underline;
 		}
 
+		a.fab {
+			text-decoration: none;
+			background: none;
+		}
+
 		nav {
 			text-align: center;
 			font-family: 'Major Mono Display', monospace;
@@ -181,101 +186,89 @@
 </head>
  
 <body>
- 
+	<main>
+	  	<section id="part_1">
+	  		<div class="vertical-center">
+		  		<h2>Hi there</h2>
+			    <p>My name is Marco Squarcina, I'm a postdoctoral researcher at <a href="https://secpriv.tuwien.ac.at">TU Wien</a>. My research interests focus on web security, but I’m passionate about computer security and hacking in its broadest sense. I play and organise <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">CTFs</a> as a founding member of <a href="https://mhackeroni.it">mhackeroni</a> and <a href="https://secgroup.github.io/">c00kies</a>. Before relocating to Austria I served as a coach for the national cybersecurity team in Italy to compete in the ENISA <a href="https://ecsc.eu/">European Cyber Security Challenge</a>.</p>
+			    <p>The best way to get in touch with me is by <a href="mailto:marco.squarcina@tuwien.ac.at">e-mail</a>. Please use my <a href="/data/pubkey.asc">PGP key</a> if you need to send sensitive data. You can also reach me by phone at +43 (1) 58801-192607, or in my office at Favoritenstrasse 9-11, Stiege 2, 1. Stock, 1040 Wien.</p>
+			    <p><a href="https://twitter.com/blueminimal" class="fab fa-twitter"></a> <a href="facebook.com/marco.squarcina" class="fab fa-facebook-f"></a> <a href="https://www.linkedin.com/in/squarcina" class="fab fa-linkedin-in"></a></p>
+			</div>
+	  	</section>
+	 
+	  	<section id="part_2">
+	  		<div class="vertical-center">
+				<h2>Publications</h2>
+				
+				<h3 id="conferences">Conferences</h3>
 
-  <main>
- 
-  	<section id="part_1">
-  		<div class="vertical-center">
-  		<h2>Hi there</h2>
-	    <p>My name is Marco Squarcina, I'm a postdoctoral researcher at <a href="https://secpriv.tuwien.ac.at">TU Wien</a>. My research interests focus on web security, but I’m passionate about computer security and hacking in its broadest sense. I play and organise <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">CTFs</a> as a founding member of <a href="https://mhackeroni.it">mhackeroni</a> and <a href="https://secgroup.github.io/">c00kies</a>. Before relocating to Austria I served as a coach for the national cybersecurity team in Italy to compete in the ENISA <a href="https://ecsc.eu/">European Cyber Security Challenge</a>.</p>
-	    <p>The best way to get in touch with me is by <a href="mailto:marco.squarcina@tuwien.ac.at">e-mail</a>. Please use my <a href="/data/pubkey.asc">PGP key</a> if you need to send sensitive data. You can also reach me by phone at +43 (1) 58801-192607, or in my office at Favoritenstrasse 9-11, Stiege 2, 1. Stock, 1040 Wien.</p>
-	</div>
-  	</section>
- 
-  	<section id="part_2">
-  		<div class="vertical-center">
+				<ul>
+					<li>S. Calzavara, R. Focardi, M. Nemec, A. Rabitti, M. Squarcina. <strong>Postcards from the Post-HTTP World:
+					Amplification of HTTPS Vulnerabilities in the Web Ecosystem</strong>. In the proceedings of IEEE Symposium on Security and Privacy (S&amp;P). 2019. <a href="/data/papers/SP19_postcards_from_the_post_HTTP_world.pdf">pdf</a>, <a href="https://secgroup.github.io/tlswebscan/">website</a></li>
+					<li>S. Calzavara, R. Focardi, M. Maffei, C. Schneidewind, M. Squarcina, M. Tempesta. <strong>WPSE: Fortifying Web Protocols via Browser-Side Security Monitoring</strong>. In the proceedings of USENIX Security. 2018. <a href="https://arxiv.org/pdf/1806.09111.pdf">arXiv</a> <a href="/data/papers/USESEC18_wpse.pdf">pdf</a> <a href="/data/papers/USESEC18_wpse-slides.pdf">slides</a></li>
+					<li>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta. <strong>Surviving the Web: A Journey into Web Session Security (extended abstract)</strong>. The Web Conference (Journal Track). 2018 . Full version <a href="/data/papers/CSUR17_surviving_the_web.pdf">pdf</a></li>
+					<li>R. Focardi, F. Palmarini, G. Steel, M. Squarcina, M. Tempesta. <strong>Mind Your Keys? A Security Evaluation of Java Keystores</strong>. In the proceedings of The Network and Distributed System Security Symposium (NDSS 2018). 2018. <a href="/data/papers/NDSS2018_mind_your_keys.pdf">pdf</a> <a href="/data/papers/NDSS2018_mind_your_keys-slides.pdf">slides</a> <a href="https://www.youtube.com/watch?v=JtFJuxRC56s">video</a></li>
+					<li>R. Focardi, M. Squarcina. <strong>Run-time Attack Detection in Cryptographic APIs</strong>. In the proceedings of the 30th Computer Security Foundations Symposium (CSF 2017). 2017. <a href="/data/papers/CSF17_runtime_attack_detection_crypto_api.pdf">pdf</a> <a href="/data/papers/CSF17_runtime_attack_detection_crypto_api-slides.pdf">slides</a></li>
+					<li>S. Das, R. Focardi, F. Luccio, E. Markou, D. Moro, M. Squarcina. Gathering of Robots in a Ring with Mobile Faults. In the proceedings of the 17th Italian Conference on Theoretical Computer Science (ICTCS 2016). 2016. <a href="/data/papers/ICTCS2016_gathering_of_robots_in_a_ring_with_mobile_faults.pdf">pdf</a></li>
+					<li>R. Focardi, F. Luccio, M. Squarcina. Fast SQL Blind Injections in High Latency Networks. In the proceedings of the 1st AESS European Conference on Satellite Telecommunications, Security and Privacy Special Track (ESTEL 2012). 2012. <a href="/data/papers/ESTEL12_fast_SQL_blind_injections_in_high_latency_networks.pdf">pdf</a></li>
+					<li>M. Bugliesi, S. Calzavara, R. Focardi, M. Squarcina. <strong>Gran: model checking grsecurity RBAC policies</strong>. In the proceedings of the 25th Computer Security Foundations Symposium (CSF 2012). 2012. <a href="/data/papers/CSF12_gran_model_checking_grsecurity_RBAC_policies.pdf">pdf</a></li>
+				</ul>
 
-	  <h2>Publications</h2>
-	<h3 id="conferences">Conferences</h3>
+				<h3 id="journals">Journals</h3>
 
-	<ul>
-	  <li>S. Calzavara, R. Focardi, M. Nemec, A. Rabitti, M. Squarcina. <strong>Postcards from the Post-HTTP World:
-	Amplification of HTTPS Vulnerabilities in the Web Ecosystem</strong>. To appear in the proceedings of IEEE Symposium on Security and Privacy (S&amp;P). 2019. <a href="/assets/data/papers/SP19_postcards_from_the_post_HTTP_world.pdf">pdf</a></li>
-	  <li>S. Calzavara, R. Focardi, M. Maffei, C. Schneidewind, M. Squarcina, M. Tempesta. <strong>WPSE: Fortifying Web Protocols via Browser-Side Security Monitoring</strong>. In the proceedings of USENIX Security. 2018. <a href="https://arxiv.org/pdf/1806.09111.pdf">arXiv</a> <a href="/assets/data/papers/USESEC18_wpse.pdf">pdf</a> <a href="/assets/data/papers/USESEC18_wpse-slides.pdf">slides</a></li>
-	  <li>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta. <strong>Surviving the Web: A Journey into Web Session Security (extended abstract)</strong>. The Web Conference (Journal Track). 2018 . Full version <a href="/assets/data/papers/CSUR17_surviving_the_web.pdf">pdf</a></li>
-	  <li>R. Focardi, F. Palmarini, G. Steel, M. Squarcina, M. Tempesta. <strong>Mind Your Keys? A Security Evaluation of Java Keystores</strong>. In the proceedings of The Network and Distributed System Security Symposium (NDSS 2018). 2018. <a href="/assets/data/papers/NDSS2018_mind_your_keys.pdf">pdf</a> <a href="/assets/data/papers/NDSS2018_mind_your_keys-slides.pdf">slides</a> <a href="https://www.youtube.com/watch?v=JtFJuxRC56s">video</a></li>
-	  <li>R. Focardi, M. Squarcina. <strong>Run-time Attack Detection in Cryptographic APIs</strong>. In the proceedings of the 30th Computer Security Foundations Symposium (CSF 2017). 2017. <a href="/assets/data/papers/CSF17_runtime_attack_detection_crypto_api.pdf">pdf</a> <a href="/assets/data/papers/CSF17_runtime_attack_detection_crypto_api-slides.pdf">slides</a></li>
-	  <li>S. Das, R. Focardi, F. Luccio, E. Markou, D. Moro, M. Squarcina. Gathering of Robots in a Ring with Mobile Faults. In the proceedings of the 17th Italian Conference on Theoretical Computer Science (ICTCS 2016). 2016. <a href="/assets/data/papers/ICTCS2016_gathering_of_robots_in_a_ring_with_mobile_faults.pdf">pdf</a></li>
-	  <li>R. Focardi, F. Luccio, M. Squarcina. Fast SQL Blind Injections in High Latency Networks. In the proceedings of the 1st AESS European Conference on Satellite Telecommunications, Security and Privacy Special Track (ESTEL 2012). 2012. <a href="/assets/data/papers/ESTEL12_fast_SQL_blind_injections_in_high_latency_networks.pdf">pdf</a></li>
-	  <li>M. Bugliesi, S. Calzavara, R. Focardi, M. Squarcina. <strong>Gran: model checking grsecurity RBAC policies</strong>. In the proceedings of the 25th Computer Security Foundations Symposium (CSF 2012). 2012. <a href="/assets/data/papers/CSF12_gran_model_checking_grsecurity_RBAC_policies.pdf">pdf</a></li>
-	</ul>
-	<h3 id="journals">Journals</h3>
+				<ul>
+					<li>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta. <strong>Surviving the Web: A Journey into Web Session Security</strong>. ACM Computing Surveys (CSUR). 2017. Pre-print version: <a href="/data/papers/CSUR17_surviving_the_web.pdf">pdf</a></li>
+				</ul>
 
-	<ul>
-	  <li>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta. <strong>Surviving the Web: A Journey into Web Session Security</strong>. ACM Computing Surveys (CSUR). 2017. Pre-print version: <a href="/assets/data/papers/CSUR17_surviving_the_web.pdf">pdf</a></li>
-	</ul>
+				<h3 id="workshops">Workshops</h3>
 
-	<h3 id="workshops">Workshops</h3>
-
-	<ul>
-	  <li>G. Caiazza, R. Focardi, M. Squarcina. Run-time analysis of PKCS#11 attacks. In the proceedings of the 8th International Workshop on Analysis of Security APIs (ASA-8). 2015. <a href="/assets/data/papers/ASA8_run-time_analysis_of_PKCS11_attacks.pdf">pdf</a></li>
-	</ul>
-	</div>
-  	</section>
+				<ul>
+					<li>G. Caiazza, R. Focardi, M. Squarcina. Run-time analysis of PKCS#11 attacks. In the proceedings of the 8th International Workshop on Analysis of Security APIs (ASA-8). 2015. <a href="/data/papers/ASA8_run-time_analysis_of_PKCS11_attacks.pdf">pdf</a></li>
+				</ul>
+			</div>
+	  	</section>
 
 
-  	<section id="part_3">
-  		  		<div class="vertical-center">
-  		<h2>Teaching</h2>
-		<ul>
-		  <li><a href="https://secgroup.dais.unive.it/teaching/security-course/">Security 1 [CM0475], Security 2 [CM0494] (A.Y. 2015/16 - 2017/18)</a></li>
-		  <li>Security of Computer Systems [CM0288] (A.Y. 2013/14 - 2014/15)</li>
+	  	<section id="part_3">
+	  		<div class="vertical-center">
+		  		<h2>Teaching</h2>
+				<ul>
+					<li>2019 (SS): lecturer, <a href="https://tiss.tuwien.ac.at/course/courseDetails.xhtml?dswid=8171&dsrid=12&courseNr=192082&semester=2019S">Introduction to Security (UE) [192.082]</a>, TU Wien</li>
+					<li>2015/16 - 2017/18: teaching assistant, <a href="https://secgroup.dais.unive.it/teaching/security-course/">Security 1 [CM0475], Security 2 [CM0494], Ca' Foscari University of Venice</a></li>
+					<li>2013/14 - 2014/15: teaching assistant, Security of Computer Systems [CM0288], Ca' Foscari University of Venice</li>
+				</ul>
+			</div>
+	  	</section>
+
+
+	  	<section id="part_4">
+	  		<div class="vertical-center">
+		  		<h2>Vulns</h2>
+				<ul>
+					<li><a href="https://www.oracle.com/technetwork/topics/security/cpuapr2018-3678067.html">CVE-2018-2794</a>, Oracle Java, CVSS 3.0 Base Score 7.7 (HIGH)</li>
+					<li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10356</a>, Oracle Java, CVSS 3.0 Base Score 6.2 (MEDIUM)</li>
+					<li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10345</a>, Oracle Java, CVSS 3.0 Base Score 3.1 (LOW)</li>
+					<li><a href="https://gsuiteupdates.googleblog.com/2018/04/more-secure-sign-in-chrome.html">SAML2.0, Login CSRF on Google</a></li>
+				</ul>
+			</div>
+	  	</section>
+	  
+	  	<section id="part_5">
+	  		<div class="vertical-center">
+		  		<h2>Music</h2>
+		  		<p>TODO</p>
+	 		</div>
+	  	</section>
+	</main>
+
+	<nav>	
+		<ul id="navigation">
+			<li><a href="#part_1" class="fas fa-child" alt="About"></a></li>
+			<li><a href="#part_2" class="fas fa-flask" alt="Research"></a></li>
+			<li><a href="#part_3" class="fas fa-chalkboard-teacher" alt="Teaching"></a></li>
+			<li><a href="#part_4" class="fas fa-bug" alt="Vulnerabilities"></a></li>
+			<li><a href="#part_5" class="fas fa-music" alt="Music"></a></li>
 		</ul>
-	</div>
-  	</section>
-
-
-  	<section id="part_4">
-  		<div class="vertical-center">
-
-  		<h2>Vulns</h2>
-
-		<h3 id="cves">CVEs</h3>
-
-		<ul>
-		  <li><a href="https://www.oracle.com/technetwork/topics/security/cpuapr2018-3678067.html">CVE-2018-2794</a>, Oracle Java, CVSS 3.0 Base Score 7.7 (HIGH)</li>
-		  <li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10356</a>, Oracle Java, CVSS 3.0 Base Score 6.2 (MEDIUM)</li>
-		  <li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10345</a>, Oracle Java, CVSS 3.0 Base Score 3.1 (LOW)</li>
-		</ul>
-
-		<h3 id="misc">Misc</h3>
-
-		<ul>
-		  <li><a href="https://gsuiteupdates.googleblog.com/2018/04/more-secure-sign-in-chrome.html">SAML2.0, Login CSRF on Google</a></li>
-		</ul>
-		</div>
-  	</section>
-  
-  	<section id="part_5">
-  		  		  		<div class="vertical-center">
-
-  		<h2>Music</h2>
-  		<p>Todo</p>
- </div>
-  	</section>
- 
-  </main>
-
-  <nav>	
-	<ul id="navigation">
-		<li><a href="#part_1" class="fas fa-child" alt="About"></a></li>
-		<li><a href="#part_2" class="fas fa-flask" alt="Research"></a></li>
-		<li><a href="#part_3" class="fas fa-chalkboard-teacher" alt="Teaching"></a></li>
-		<li><a href="#part_4" class="fas fa-bug" alt="Vulnerabilities"></a></li>
-		<li><a href="#part_5" class="fas fa-music" alt="Music"></a></li>
-	</ul>
-</nav>
- 
+	</nav>
 </body>
 </html>
