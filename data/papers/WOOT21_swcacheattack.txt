@@ -1,0 +1,9 @@
+@inproceedings{SquarcinaSCM21,
+    author    = {Marco Squarcina and
+                 Stefano Calzavara and
+                 Matteo Maffei},
+    title     = {The Remote on the Local: Exacerbating Web Attacks Via Service Workers Caches},
+    booktitle = {15th {IEEE} Workshop on Offensive Technologies ({WOOT} 21)},
+    year      = {2021},
+    publisher = {{IEEE}}
+}
