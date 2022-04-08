@@ -1,0 +1,9 @@
+@unpublished{BeerVSL22,
+    author    = {Philipp Beer and
+                 Lorenzo Veronese and
+                 Marco Squarcina and
+                 Martina Lindorfer},
+    title     = {{The Bridge between Web Applications and Mobile Platforms is Still Broken}},
+    note      = {{Presented} at the {IEEE} Symposium on Security and Privacy Workshops, SecWeb 2022},
+    year      = {2022}
+}

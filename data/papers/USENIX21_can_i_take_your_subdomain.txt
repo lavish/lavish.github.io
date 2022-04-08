@@ -1,0 +1,10 @@
+@inproceedings{SquarcinaTVCM21,
+    author    = {Marco Squarcina and
+                 Mauro Tempesta and
+                 Lorenzo Veronese and
+                 Stefano Calzavara and
+                 Matteo Maffei},
+    title     = {Can I Take Your Subdomain? Exploring Same-Site Attacks in the Modern Web},
+    booktitle = {30th {USENIX} Security Symposium},
+    year      = {2021}
+}
