@@ -1,0 +1,12 @@
+@inproceedings{VeroneseTVCM21,
+    author    = {Lorenzo Veronese and 
+                 Benjamin Farinier and 
+                 Pedro Bernardo and 
+                 Mauro Tempesta and 
+                 Marco Squarcina and 
+                 Matteo Maffei},
+    title     = {WebSpec: Towards Machine-Checked Analysis of Browser Security Mechanisms},
+    booktitle = {Symposium on Security and Privacy (SP)},
+    year      = {2023},
+    publisher = {{IEEE}}
+}
