@@ -1,4 +1,4 @@
-@inproceedings{VeroneseTVCM21,
+@inproceedings{VeroneseFBTSM23,
     author    = {Lorenzo Veronese and 
                  Benjamin Farinier and 
                  Pedro Bernardo and 
