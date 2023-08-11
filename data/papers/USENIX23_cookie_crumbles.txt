@@ -1,0 +1,9 @@
+@inproceedings{SquarcinaAVM23,
+    author    = {Marco Squarcina and
+                 Pedro Adão and
+                 Lorenzo Veronese and
+                 Matteo Maffei},
+    title     = {{Cookie Crumbles: Breaking and Fixing Web Session Integrity}},
+    booktitle = {32nd {USENIX} Security Symposium},
+    year      = {2023}
+}
