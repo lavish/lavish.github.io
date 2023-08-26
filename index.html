@@ -61,7 +61,6 @@
 		nav ul li a {
 			text-decoration: none;
 			background: none;
-			background-color: transparent;
 		}
 
 		nav {
@@ -78,18 +77,25 @@
 			width: 100%;
 			list-style: none;
 			background: var(--container-bg-color); 
-			text-align: center;
+			text-align: left;
+			display: flex;
+			flex-flow: row wrap;
+			margin: 0;
+			align-items: center;
+			justify-content: center;
+			column-gap: 5%;
 		}
 
 		#navigation li {
 			display: inline-block;
-			margin: 0;
-			padding: 0 1em 0 0;
+			padding: 0;
+			margin: 0.4rem 0;
 		}
 
 		#navigation li a, #navigation li a:link, #navigation li a:visited {
 			color: #eee;
 			text-decoration: none;
+			padding: 0.2rem 0.6rem;
 		}
 
 		/* #navigation li a:hover, #navigation li a:focus, #navigation li a:active {
@@ -191,6 +197,7 @@
 
 			#navigation {
 				position: fixed;
+				column-gap: 0%;
 			}
 
 			#navigation li {
