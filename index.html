@@ -7,109 +7,163 @@
 	<meta name="author" content="Marco Squarcina">
 	<meta name="description" content="Marco Squarcina personal website">
 	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Titillium+Web&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<style>
-		html, body {
+		:root {
+			--main-bg-color: ;
+			--container-bg-color: rgba(0, 0, 0, 0.7);
+			--badge-fg-color: #fff;
+			--badge-bg-color: #8c3458;
+		}
+
+		html, body, main {
 			height: 100%;
 			margin: 0;
 			padding: 0;
-			color: #eee;
-			background: #000;
+			color: #fff;
+			background: transparent;
 			font-family: 'Titillium Web', sans-serif;
+			font-size: 1rem;
+		}
+
+		body {
+			background-image: url("data/bg_bw.jpg");
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 		}
 
 		a, a:active, a:hover, a:enabled {
-			color: inherit;
-			background-color: rgba(255, 255, 255, 0.05);
-			border-radius: 3px;
-			padding: 0.1em 0.2em;
-			text-decoration: underline;
+			color: #fff;
+			text-decoration: none;
+			background-color: rgba(255, 255, 255, 0.1);
+			padding: 0 4px;
+			border-radius: 4px;
+			color: #B1DDF1;
 		}
 
-		a.fab {
+		nav ul li a {
 			text-decoration: none;
 			background: none;
+			background-color: transparent;
 		}
 
 		nav {
-			text-align: center;
-			font-family: 'Major Mono Display', monospace;
+			font-family: 'Share Tech Mono', monospace;
 		}
 
 		#navigation {
-			position: fixed;
+			position: relative;
 			top: 0; 
 			left: 0;
 			z-index: 99;	
 			margin: 0 auto;
-			padding: 1em 10% .5em 10%;
+			padding: 1em 0;
 			width: 100%;
-			min-height: 3%;
 			list-style: none;
-			text-align: left;
-			background: linear-gradient(to bottom, rgba(34,34,34,0.9) 0%, rgba(34,34,34,0) 100%); 
+			background: var(--container-bg-color); 
+			text-align: center;
 		}
 
 		#navigation li {
-			float: left;
-			text-align: center;
+			display: inline-block;
 			margin: 0;
 			padding: 0 1em 0 0;
 		}
 
 		#navigation li a, #navigation li a:link, #navigation li a:visited {
+			color: #eee;
 			text-decoration: none;
-			display: block;
-			font-weight: bold;
-			padding: 0.2em;
-			margin: 0;
-			font-size: 1.4em;
-			background: none;
 		}
 
 		/* #navigation li a:hover, #navigation li a:focus, #navigation li a:active {
 			text-decoration: underline;
 		} */
 
-		main,
-		section {
-			position: relative;
-			height: 100%;
+		main {
 			padding: 0;
 			margin: 0;
-			background: black;
 		}
 
-		section {
-			width: 80%;
-			margin: 0 auto;
-			padding: 0 10%;
-			font-size: 1.4em;
+		.container {
+			display: flex;
+            flex-flow: row wrap;
+			margin: 0;
+			align-items: center;
+			justify-content: center;
+			column-gap: 3%;
+			padding: 3em 0%;
+			background-color: var(--container-bg-color);
+		}
+
+
+		.container section {
+			flex: 1 500px;
 			line-height: 1.5em;
-			display: table;
-			overflow: scroll;
+			color: #aaa;
+			margin-bottom: 2em;
+			padding: 0em 1em 1em 1em;
+			background-color: rgba(0, 0, 0, 0.4);
 		}
 
+		.container section ul {
+			padding-left: 1em;
+		}
+
+		.container section li {
+			margin-bottom: 0.5em;
+		}
+		
+		.container section li::marker {
+			content: "⌁ ";
+			font-weight: bolder;
+		}
+
+		.container section:nth-of-type(3) {
+			flex: 2 100%;
+		}
 		.vertical-center {
 			display: table-cell; vertical-align: middle;
 		}
 
+		.container section a:hover {
+			/* text-decoration: ; */
+			background: var(--badge-bg-color);
+		}
+
 		section h2 {
-			font-family: 'Major Mono Display', monospace;
+			font-family: 'Share Tech Mono', monospace;
 			margin-top: 2em;
 			padding-top: 0;
-			font-size: 1.5em;
+			font-size: 1em;
 			text-align: left;
-			line-height: 2rem;
+			line-height: 1.5rem;
+			color: inherit;
 		}
 
 		section p {	
 			text-align: justify;
 		}
 
+
 		img {
 			width: 100%;
 			filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.4));
+		}
+				
+		#about {
+			display: table;
+			overflow: scroll;
+			height: 100%;
+			width: 90%;
+			padding: 0 5%;
+			font-size: 1.2em;
+			box-shadow: 0 0 3rem rgba(0, 0, 0, 0.8);
+			color: #fff;
 		}
 
 		@media only screen and (min-width : 768px) {
@@ -122,181 +176,93 @@
 				width: 25%;
 				margin: 0 0 1% 3%;
 			}
-		}
-		 
-		#about {
-			background: #0B94C1;
-			animation: background-1 15s infinite;
-		}
-		 
-		#research {
-			background: #0866A5;
-			animation: background-2 15s infinite;
+
+			#navigation {
+				position: fixed;
+			}
+
+			#navigation li {
+				display: inline;
+			}
+
+			.container {
+				padding: 3em 10%;
+			}
+
+			.container section {
+				padding: 0em 3em 1em 3em;
+			}
+
+			#about {
+				width: 80%;
+				padding: 0 10%;
+			}
 		}
 
-		#service {
-			background: #254189;
-			animation: background-3 15s infinite;
-		}
-		 
-		#teaching {
-			background: #5C27A6;
-			animation: background-4 15s infinite;
+		#about span.fab {
+			margin-right: 1em;
+			width: 24px;
 		}
 
-		#vulns { 
-			background: #7D00BC;
-			animation: background-5 15s infinite;
+		a.paper-item {
+			background: none;
 		}
 
-		#music {
-			background: #c712a0;
-			animation: background-6 15s infinite;
+		a.paper-item:after {
+			content: ' ]';
+			color: var(--badge-bg-color);
 		}
 
-		@keyframes background-1 {
-			0%   { background-color: #0B94C1; }
-			17%  { background-color: #0866A5; }  
-			34%  { background-color: #254189; }
-			50%  { background-color: #5C27A6; }
-			66%  { background-color: #7D00BC; }
-			83%  { background-color: #c712a0; }
-			100% { background-color: #0B94C1; }
+		a.paper-item:before {
+			content: '[ ';
+			color: var(--badge-bg-color);
 		}
 
-		@keyframes background-2 {
-			0%   { background-color: #0866A5; }  
-			17%  { background-color: #254189; }
-			34%  { background-color: #5C27A6; }
-			50%  { background-color: #7D00BC; }
-			66%  { background-color: #c712a0; }
-			83%  { background-color: #0B94C1; }
-			100% { background-color: #0866A5; }
-		}
-
-		@keyframes background-3 {
-			0%   { background-color: #254189; }
-			17%  { background-color: #5C27A6; }
-			34%  { background-color: #7D00BC; }
-			50%  { background-color: #c712a0; }
-			66%  { background-color: #0B94C1; }
-			83%  { background-color: #0866A5; }
-			100% { background-color: #254189; }
-		}
-
-		@keyframes background-4 {
-			0%   { background-color: #5C27A6; }
-			17%  { background-color: #7D00BC; }
-			34%  { background-color: #c712a0; }
-			50%  { background-color: #0B94C1; }
-			66%  { background-color: #0866A5; }
-			83%  { background-color: #254189; }
-			100% { background-color: #5C27A6; }
-		}
-
-		@keyframes background-5 {
-			0%   { background-color: #7D00BC; }
-			17%  { background-color: #c712a0; }
-			34%  { background-color: #0B94C1; }
-			50%  { background-color: #0866A5; }
-			66%  { background-color: #254189; }
-			83%  { background-color: #5C27A6; }
-			100% { background-color: #7D00BC; }
-		}
-
-		@keyframes background-6 {
-			0%   { background-color: #c712a0; }
-			17%  { background-color: #0B94C1; }
-			34%  { background-color: #0866A5; }
-			50%  { background-color: #254189; }
-			66%  { background-color: #5C27A6; }
-			83%  { background-color: #7D00BC; }
-			100% { background-color: #c712a0; }
+		strong {
+			color: #fff;
 		}
   </style>
 </head>
  
 <body>
 
-	<nav>	
+	<nav>
 		<ul id="navigation">
-			<li><a href="#about"><span class="fas fa-child"></span></a></li>
-			<li><a href="#research"><span class="fas fa-flask"></span></a></li>
-			<li><a href="#service"><span class="fab fa-readme"></span></a></li>
-			<li><a href="#teaching"><span class="fas fa-chalkboard-teacher"></span></a></li>
-			<li><a href="#vulns"><span class="fas fa-bug"></span></a></li>
-			<li><a href="#music"><span class="fas fa-music"></span></a></li>
+			<li><a href="#about">about</a></li>
+			<li><a href="#service">service</a></li>
+			<li><a href="#teaching">teaching</span></a></li>
+			<li><a href="#research">publications</a></li>
+			<li><a href="#theses">theses</span></a></li>
+			<li><a href="#projects">projects</span></a></li>
+			<li><a href="#media">media</span></a></li>
+			<li><a href="#talks">talks</span></a></li>
+			<li><a href="#vulns">CVEs</a></li>
+			<li><a href="#music">music</a></li>
 		</ul>
 	</nav>
 
 	<main>
 		<section id="about">
 			<div class="vertical-center">
-				<h2>Hi there</h2>
-				<img src="data/me.jpg" alt="Marco">
-				<p>My name is Marco Squarcina, I'm a Senior Scientist in the <a href="https://secpriv.wien">Research Unit Security and Privacy</a> at <a href="https://tuwien.at">TU Wien</a>. My research interests focus mainly on Web and mobile security, but I'm passionate about computer security and hacking in its broadest sense. I love teaching, and I strongly support the concept of learning by doing. I play and organise <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">CTF competitions</a> with <a href="https://w0y.at">w0y</a> and <a href="https://mhackeroni.it">mhackeroni</a> with whom I competed 3 times at the finals of <a href="https://defcon.org/html/links/dc-ctf.html">DEF CON CTF</a>. I co-organized the <a href="https://cyberchallenge.it/">Italian Cyber Challenge</a> project, trained Team Europe for the <a href="https://www.enisa.europa.eu/topics/cybersecurity-education/international-cybersecurity-challenge-icc/team-europe-icc2022">International Cybersecurity Challenge</a> (ICC 2022), and coordinated the largest Attack/Defense CTF in the history of the <a href="https://ecsc.eu/">European Cybersecurity Challenge</a> (ECSC 2022) by the <a href="https://www.enisa.europa.eu/">European Union Agency for Cybersecurity</a> (ENISA).</p>
-				<p>The best way to get in touch with me is by <a href="mailto:marco.squarcina@tuwien.ac.at">e-mail</a>. Please use my <a href="/data/pubkey.asc">PGP key</a> if you need to send sensitive data. You can also reach me by phone at +43 (1) 58801-192607, or in my office at Favoritenstrasse 9-11, Stiege 2, 1. Stock, 1040 Wien.</p>
-                <p><a href="https://twitter.com/blueminimal" class="fab fa-twitter"></a> <a rel="me" href="https://infosec.exchange/@minimalblue" class="fab fa-mastodon"></a> <a href="https://facebook.com/marco.squarcina" class="fab fa-facebook-f"></a> <a href="https://www.linkedin.com/in/squarcina" class="fab fa-linkedin-in"></a></p>
+				<h2>Hello,</h2>
+				<img src="data/me_bw.png" alt="Marco">
+				<p>My name is <strong>Marco Squarcina</strong>, I'm a Senior Scientist in the <a href="https://secpriv.wien">Research Unit Security and Privacy</a> at <a href="https://tuwien.at">TU Wien</a>.</p>
+				<p>My research interests focus mainly on Web and mobile security, but I'm passionate about computer security and hacking in its broadest sense. I love teaching, and I strongly support the concept of learning by doing. Sometimes I play and organise <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">CTF competitions</a> with <a href="https://w0y.at">w0y</a> and <a href="https://mhackeroni.it">mhackeroni</a>. I had the privilege to do cool things connected with my job, like talking at <a href="https://www.blackhat.com/us-23/briefings/schedule/#cookie-crumbles-unveiling-web-session-integrity-vulnerabilities-32551">Black Hat USA</a>, playing <a href="https://defcon.org/html/links/dc-ctf.html">DEF CON CTF</a> finals 4 times, co-organizing the <a href="https://cyberchallenge.it/">Italian Cyber Challenge</a> project, training Team Europe for the <a href="https://www.enisa.europa.eu/topics/cybersecurity-education/international-cybersecurity-challenge-icc/team-europe-icc2022">International Cybersecurity Challenge</a> (ICC), or hosting the largest Attack/Defense CTF in the history of the <a href="https://ecsc.eu/">European Cybersecurity Challenge</a> (ECSC 2022). I'm now the coach of the <a href="https://verbotengut.at/">Austrian team</a> for ECSC 2023.</p>
+				<p>The best way to get in touch with me is by <a href="mailto:marco.squarcina@tuwien.ac.at">e-mail</a>. Please use my <a href="/data/pubkey.asc">PGP key</a> if you need to send sensitive data. You can also reach me by phone at +43 (1) 58801-192607, or in my office, room HA0107, at Favoritenstrasse 9-11, 1040 Wien.</p>
+                <p>
+					<a href="https://twitter.com/blueminimal"><span class="fab fa-twitter"></span>@blueminimal</a><br>
+					<a rel="me" href="https://infosec.exchange/@minimalblue"><span class="fab fa-mastodon"></span>@minimalblue@infosec.exchange</a><br>
+					<a href="https://www.linkedin.com/in/squarcina"><span class="fab fa-linkedin-in"></span>in/squarcina</a>
+				</p>
 			</div>
 		</section>
-	 
-		<section id="research">
-			<div class="vertical-center">
-				<h2>Selected Publications <span class="fas fa-flask"></span></h2>
-				<ul>
-					<li>
-						<strong>Cookie Crumbles: Breaking and Fixing Web Session Integrity</strong>. USENIX Security. 2023. <a href="https://github.com/SecPriv/cookiecrumbles">paper/artifact</a> <a href="/data/papers/USENIX23_cookie_crumbles.txt">bibtex</a> (slides <a href="/data/papers/BHUSA23_cookie_crumbles-slides.pdf">BlackHat USA</a>/<a href="/data/papers/USENIX23_cookie_crumbles-slides.pdf">USENIX</a>)
-						<br>M. Squarcina, P. Adao, L. Veronese, M. Maffei.
-					</li>
-					<li>
-						<strong>WebSpec: Towards Machine-Checked Analysis of Browser Security Mechanisms</strong>. IEEE Symposium on Security and Privacy (S&amp;P). 2023. <a href="https://arxiv.org/abs/2201.01649">preprint</a> <a href="/data/papers/SP23_webspace.txt">bibtex</a>
-						<br>L. Veronese, B. Farinier, P. Bernardo, M. Tempesta, M. Squarcina, M. Maffei.
-					</li>
-					<li>
-						<strong>The Bridge between Web Applications and Mobile Platforms is Still Broken</strong>. Workshops of the IEEE Symposium on Security and Privacy (SecWeb). 2022. <a href="/data/papers/SECWEB22_broken_bridge.pdf">pdf</a> <a href="/data/papers/SECWEB22_broken_bridge.txt">bibtex</a>
-						<br>P. Beer, L. Veronese, M. Squarcina, M. Lindorfer.
-					</li>
-					<li>
-						<strong>Can I Take Your Subdomain? Exploring Same-Site Attacks in the Modern Web</strong>. USENIX Security. 2021. <a href="/data/papers/USENIX21_can_i_take_your_subdomain.pdf">pdf</a> <a href="/data/papers/USENIX21_can_i_take_your_subdomain.txt">bibtex</a> <a href="https://canitakeyoursubdomain.name/">website</a>
-						<br>M. Squarcina, M. Tempesta, L. Veronese, S. Calzavara, M. Maffei.
-						</li>
-					<li>
-						<strong>The Remote on the Local: Exacerbating Web Attacks Via Service Workers Caches</strong>. 15th IEEE Workshop on Offensive Technologies (WOOT 21). 2021. <a href="/data/papers/WOOT21_swcacheattack.pdf">pdf</a> <a href="/data/papers/WOOT21_swcacheattack.txt">bibtex</a> <a href="https://swcacheattack.secpriv.wien/">website</a>
-						<br>M. Squarcina, S. Calzavara, M. Maffei.
-						</li>
-					<li>
-						<strong>Postcards from the Post-HTTP World: Amplification of HTTPS Vulnerabilities in the Web Ecosystem</strong>. IEEE Symposium on Security and Privacy (S&amp;P). 2019. <a href="/data/papers/SP19_postcards_from_the_post_HTTP_world.pdf">pdf</a> <a href="https://secgroup.github.io/tlswebscan/">website</a>
-						<br>S. Calzavara, R. Focardi, M. Nemec, A. Rabitti, M. Squarcina.
-						</li>
-					<li>
-						<strong>WPSE: Fortifying Web Protocols via Browser-Side Security Monitoring</strong>. USENIX Security. 2018. <a href="https://arxiv.org/pdf/1806.09111.pdf">arXiv</a> <a href="/data/papers/USENIX18_wpse.pdf">pdf</a> <a href="/data/papers/USENIX18_wpse-slides.pdf">slides</a>
-						<br>S. Calzavara, R. Focardi, M. Maffei, C. Schneidewind, M. Squarcina, M. Tempesta.
-						</li>
-					<li>
-						<strong>Mind Your Keys? A Security Evaluation of Java Keystores</strong>. Network and Distributed System Security Symposium (NDSS 2018). 2018. <a href="/data/papers/NDSS2018_mind_your_keys.pdf">pdf</a> <a href="/data/papers/NDSS2018_mind_your_keys-slides.pdf">slides</a> <a href="https://www.youtube.com/watch?v=JtFJuxRC56s">video</a>
-						<br>R. Focardi, F. Palmarini, G. Steel, M. Squarcina, M. Tempesta.
-						
-					</li>
-					<li><strong>Surviving the Web: A Journey into Web Session Security</strong>. ACM Computing Surveys (CSUR). 2017. Pre-print version: <a href="/data/papers/CSUR17_surviving_the_web.pdf">pdf</a>
-						<br>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta.
-						</li>
-					<li>
-						<strong>Run-time Attack Detection in Cryptographic APIs</strong>. 30th Computer Security Foundations Symposium (CSF 2017). 2017. <a href="/data/papers/CSF17_runtime_attack_detection_crypto_api.pdf">pdf</a> <a href="/data/papers/CSF17_runtime_attack_detection_crypto_api-slides.pdf">slides</a>
-						<br>R. Focardi, M. Squarcina.
-						</li>
-					<li>
-						<strong>Gran: model checking grsecurity RBAC policies</strong>. 25th Computer Security Foundations Symposium (CSF 2012). 2012. <a href="/data/papers/CSF12_gran_model_checking_grsecurity_RBAC_policies.pdf">pdf</a>
-						<br>M. Bugliesi, S. Calzavara, R. Focardi, M. Squarcina.
-						</li>
-				</ul>
-				<p>My <a href="https://scholar.google.com/citations?user=squarcina">scholar profile</a>.</p>
-			</div>
-		</section>
+		<div class="container">
+
 
 		<section id="service">
-			<div class="vertical-center">
-				<h2>Recent Academic Service <span class="fab fa-readme"></span></h2>
+				<h2>Recent Academic Service</h2>
 				<ul>
+					<li><a href="https://eurosp2024.ieee-security.org/">IEEE EuroS&amp;P 2024</a>, IEEE European Symposium on Security and Privacy. PC member</li>
 					<li><a href="https://www.ieee-security.org/TC/SP2024/">IEEE S&amp;P 2024</a>, IEEE Symposium on Security and Privacy. PC member</li>
 					<li><a href="https://www.acsac.org/">ACSAC 2023</a>, Annual Computer Security Applications Conference (ACSAC). PC member</li>
 					<li><a href="https://wootconference.org/">WOOT 2022-2023</a>, IEEE Workshop on Offensive Technologies, co-located with IEEE S&amp;P. PC member and Reproducibility chair (2023)</li>
@@ -312,12 +278,10 @@
 					<li><a href="https://academic.oup.com/cybersecurity">Journal of Cybersecurity</a>, Oxford University Press. Reviewer</li>
 					<li>External reviewer for USENIX Security, IEEE S&amp;P, NDSS, CCS.</li>
 				</ul>
-			</div>
 		</section>
 
 		<section id="teaching">
-			<div class="vertical-center">
-				<h2>Teaching <span class="fas fa-chalkboard-teacher"></span></h2>
+				<h2>Teaching</h2>
 				<ul>
 					<li>2020&mdash;now (WS): lecturer, <a href="https://tiss.tuwien.ac.at/course/courseDetails.xhtml?dswid=5401&dsrid=616&courseNr=192111&semester=2022W">Attacks and Defenses in Computer Security (UE) [192.111]</a>, TU Wien</li>
 
@@ -335,28 +299,223 @@
 					
 					<li>2013/14, 2014/15: teaching assistant, Security of Computer Systems [CM0288], Ca' Foscari University of Venice</li>
 				</ul>
-			</div>
+		</section>
+
+		<section id="research">
+			<h2>Selected Publications</h2>
+			<ul>
+				<li>
+					<strong>Cookie Crumbles: Breaking and Fixing Web Session Integrity</strong>. USENIX Security. 2023.<br>
+					M. Squarcina, P. Adao, L. Veronese, M. Maffei.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="https://github.com/SecPriv/cookiecrumbles">artifact</a> <a class="paper-item" href="/data/papers/USENIX23_cookie_crumbles.txt">bibtex</a> <a class="paper-item" href="/data/papers/BHUSA23_cookie_crumbles-slides.pdf">slides BlackHat USA</a> <a class="paper-item" href="/data/papers/USENIX23_cookie_crumbles-slides.pdf">slides USENIX</a>
+						</summary>
+						<p>
+							Cookies have a long history of vulnerabilities targeting their confidentiality and integrity. To address these issues, new mechanisms have been proposed and implemented in browsers and server-side applications. Notably, improvements to the Secure attribute and cookie prefixes aim to strengthen cookie integrity against network and same-site attackers, whereas SameSite cookies have been touted as the solution to CSRF. On the server, token-based protections are considered an effective defense for CSRF in the synchronizer token pattern variant. In this paper, we question the effectiveness of these protections and study the real-world security implications of cookie integrity issues, showing how security mechanisms previously considered robust can be bypassed, exposing Web applications to session integrity attacks such as session fixation and cross-origin request forgery (CORF). These flaws are not only implementation-specific bugs but are also caused by compositionality issues of security mechanisms or vulnerabilities in the standard. Our research contributed to 12 CVEs, 27 vulnerability disclosures, and updates to the cookie standard. It comprises (i) a thorough cross-browser evaluation of cookie integrity issues, that results in new attacks originating from implementation or specification inconsistencies, and (ii) a security analysis of the top 13 Web frameworks, exposing session integrity vulnerabilities in 9 of them. We discuss our responsible disclosure and propose practical mitigations.
+						</p>
+					</details>
+				</li>
+				<li>
+					<strong>WebSpec: Towards Machine-Checked Analysis of Browser Security Mechanisms</strong>. IEEE Symposium on Security and Privacy (S&amp;P). 2023.<br>
+					L. Veronese, B. Farinier, P. Bernardo, M. Tempesta, M. Squarcina, M. Maffei.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="https://arxiv.org/abs/2201.01649">paper</a> <a class="paper-item" href="/data/papers/SP23_webspace.txt">bibtex</a>
+						</summary>
+						<p>
+							The complexity of browsers has steadily increased over the years, driven by the continuous introduction and update of Web platform components, such as novel Web APIs and security mechanisms. Their specifications are manually reviewed by experts to identify potential security issues. However, this process has proved to be error-prone due to the extensiveness of modern browser specifications and the interplay between new and existing Web platform components. To tackle this problem, we developed WebSpec, the first formal security framework for the analysis of browser security mechanisms, which enables both the automatic discovery of logical flaws and the development of machine-checked security proofs. WebSpec, in particular, includes a comprehensive semantic model of the browser in the Coq proof assistant, a formalization in this model of ten Web security invariants, and a toolchain turning the Coq model and the Web invariants into SMT-lib formulas to enable model checking with the Z3 theorem prover. If a violation is found, the toolchain automatically generates executable tests corresponding to the discovered attack trace, which is validated across major browsers. We showcase the effectiveness of WebSpec by discovering two new logical flaws caused by the interaction of different browser mechanisms and by identifying three previously discovered logical flaws in the current Web platform, as well as five in old versions. Finally, we show how WebSpec can aid the verification of our proposed changes to amend the reported inconsistencies affecting the current Web platform.
+						</p>
+					</details>
+				</li>
+				<li>
+					<strong>The Bridge between Web Applications and Mobile Platforms is Still Broken</strong>. Workshops of the IEEE Symposium on Security and Privacy (SecWeb). 2022.<br>
+					P. Beer, L. Veronese, M. Squarcina, M. Lindorfer.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="/data/papers/SECWEB22_broken_bridge.pdf">paper</a> <a class="paper-item" href="/data/papers/SECWEB22_broken_bridge.txt">bibtex</a>
+						</summary>
+						<p>
+							The traditional way for users to access web content on mobile devices is by loading websites in a standalone browser like Google Chrome or Firefox. Websites and recently also Progressive Web Applications (PWAs) can, however, not only be rendered in such standalone browsers, but also in so-called mobile Web Views embedded in native mobile applications. PWAs are a new paradigm in web development that brings native app-like features, such as push notifications and offline usage, to the Web. We investigate the security of those Web Views at the intersection of application security and web security and present two new attacks: (1) an attack in which Android’s Custom Tab browser feature serves as a cross-site oracle to infer information about a user on target websites and (2) a vulnerability in Web View plugins of two third-party development frameworks that allows an attacker to use a vulnerable application to access the victim's 						microphone and camera stealthily. We perform a preliminary real-world evaluation on the top 250 free Android applications and found that 5% of those that request microphone or camera permissions are potentially vulnerable to the Web View attack.
+						</p>
+					</details>
+				</li>
+				<li>
+					<strong>Can I Take Your Subdomain? Exploring Same-Site Attacks in the Modern Web</strong>. USENIX Security. 2021.<br>
+					M. Squarcina, M. Tempesta, L. Veronese, S. Calzavara, M. Maffei.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="/data/papers/USENIX21_can_i_take_your_subdomain.pdf">paper</a> <a class="paper-item" href="/data/papers/USENIX21_can_i_take_your_subdomain.txt">bibtex</a> <a class="paper-item" href="https://www.youtube.com/watch?v=3K1dUwpcOUk">talk</a> <a class="paper-item" href="https://canitakeyoursubdomain.name/">website</a>
+						</summary>
+						<p>
+							Related-domain attackers control a sibling domain of their target web application, e.g., as the result of a subdomain takeover. Despite their additional power over traditional web attackers, related-domain attackers received only limited attention from the research community. In this paper we define and quantify for the first time the threats that related-domain attackers pose to web application security. In particular, we first clarify the capabilities that related-domain attackers can acquire through different attack vectors, showing that different instances of the related-domain attacker concept are worth attention. We then study how these capabilities can be abused to compromise web application security by focusing on different angles, including cookies, CSP, CORS, postMessage, and domain relaxation. By building on this framework, we report on a large-scale security measurement on the top 50k domains from the Tranco list that led to the discovery of vulnerabilities in 887 sites, where we quantified the threats posed by related-domain attackers to popular web applications.
+						</p>
+					</details>
+					</li>
+				<li>
+					<strong>The Remote on the Local: Exacerbating Web Attacks Via Service Workers Caches</strong>. 15th IEEE Workshop on Offensive Technologies (WOOT 21). 2021.<br>
+					M. Squarcina, S. Calzavara, M. Maffei.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="/data/papers/WOOT21_swcacheattack.pdf">paper</a> <a class="paper-item" href="/data/papers/WOOT21_swcacheattack.txt">bibtex</a> <a class="paper-item" href="https://www.youtube.com/watch?v=4JMyIqbOlj0">talk</a> <a class="paper-item" href="https://swcacheattack.secpriv.wien/">website</a>
+						</summary>
+						<p>
+							Service workers boost the user experience of modern web applications by taking advantage of the Cache API to improve responsiveness and support offline usage. In this paper, we present the first security analysis of the threats posed by this programming practice, identifying an attack with major security implications. In particular, we show how a traditional XSS attack can abuse the Cache API to escalate into a personin-the-middle attack against cached content, thus compromising its confidentiality and integrity. Remarkably, this attack enables new threats which are beyond the scope of traditional XSS. After defining the attack, we study its prevalence in the wild, finding that the large majority of the sites which register service workers using the Cache API are vulnerable as long as a single webpage in the same origin of the service worker is affected by an XSS. Finally, we propose a browser-side countermeasure against this attack, and we analyze its effectiveness and practicality in terms of security benefits and backward compatibility with existing web applications.
+						</p>
+					</details>
+					</li>
+				<li>
+					<strong>Postcards from the Post-HTTP World: Amplification of HTTPS Vulnerabilities in the Web Ecosystem</strong>. IEEE Symposium on Security and Privacy (S&amp;P). 2019.
+					<br>S. Calzavara, R. Focardi, M. Nemec, A. Rabitti, M. Squarcina.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="/data/papers/SP19_postcards_from_the_post_HTTP_world.pdf">paper</a> <a class="paper-item" href="https://secgroup.github.io/tlswebscan/">website</a>
+						</summary>
+						<p>
+							HTTPS aims at securing communication over the Web by providing a cryptographic protection layer that ensures the confidentiality and integrity of communication and enables client/server authentication. However, HTTPS is based on the SSL/TLS protocol suites that have been shown to be vulnerable to various attacks in the years. This has required fixes and mitigations both in the servers and in the browsers, producing a complicated mixture of protocol versions and implementations in the wild, which makes it unclear which attacks are still effective on the modern Web and what is their import on web application security. In this paper, we present the first systematic quantitative evaluation of web application insecurity due to cryptographic vulnerabilities. We specify attack conditions against TLS using attack trees and we crawl the Alexa Top 10k to assess the import of these issues on page integrity, authentication credentials and web tracking. Our results show that the security of a consistent number of websites is severely harmed by cryptographic weaknesses that, in many cases, are due to external or related-domain hosts. This empirically, yet systematically demonstrates how a relatively limited number of exploitable HTTPS vulnerabilities are amplified by the complexity of the web ecosystem.
+						</p>
+					</details>
+					</li>
+				<li>
+					<strong>WPSE: Fortifying Web Protocols via Browser-Side Security Monitoring</strong>. USENIX Security. 2018.
+					<br>S. Calzavara, R. Focardi, M. Maffei, C. Schneidewind, M. Squarcina, M. Tempesta.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="https://arxiv.org/pdf/1806.09111.pdf">arXiv</a> <a class="paper-item" href="/data/papers/USENIX18_wpse.pdf">paper</a> <a class="paper-item" href="/data/papers/USENIX18_wpse-slides.pdf">slides</a>
+						</summary>
+						<p>
+							We present WPSE, a browser-side security monitor for web protocols designed to ensure compliance with the intended protocol flow, as well as confidentiality and integrity properties of messages. We formally prove that WPSE is expressive enough to protect web applications from a wide range of protocol implementation bugs and web attacks. We discuss concrete examples of attacks which can be prevented by WPSE on OAuth 2.0 and SAML 2.0, including a novel attack on the Google implementation of SAML 2.0 which we discovered by formalizing the protocol specification in WPSE. Moreover, we use WPSE to carry out an extensive experimental evaluation of OAuth 2.0 in the wild. Out of 90 tested websites, we identify security flaws in 55 websites (61.1%), including new critical vulnerabilities introduced by tracking libraries such as Facebook Pixel, all of which fixable by WPSE. Finally, we show that WPSE works flawlessly on 83 websites (92.2%), with the 7 compatibility issues being caused by custom implementations deviating from the OAuth 2.0 specification, one of which introducing a critical vulnerability.
+						</p>
+					</details>
+					</li>
+				<li>
+					<strong>Mind Your Keys? A Security Evaluation of Java Keystores</strong>. Network and Distributed System Security Symposium (NDSS 2018). 2018.
+					<br>R. Focardi, F. Palmarini, G. Steel, M. Squarcina, M. Tempesta.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="/data/papers/NDSS2018_mind_your_keys.pdf">paper</a> <a class="paper-item" href="/data/papers/NDSS2018_mind_your_keys-slides.pdf">slides</a> <a class="paper-item" href="https://www.youtube.com/watch?v=JtFJuxRC56s">talk</a>
+						</summary>
+						<p>
+							Cryptography is complex and variegate and re-quires to combine different algorithms and mechanisms in non-trivial ways. This complexity is often source of vulnerabilities.Secure key management is one of the most critical aspects,since leaking a cryptographic key vanishes any advantage ofusing cryptography. In this paper we analyze Java keystores,the standard way to manage and securely store keys in Javaapplications. We consider seven keystore implementations fromOracle JDK and Bouncy Castle, a widespread cryptographiclibrary. We describe, in detail, how the various keystores enforceconfidentiality and integrity of the stored keys through password-based cryptography and we show that many of the implementa-tions do not adhere to state-of-the-art cryptographic standards.We investigate the resistance to offline attacks and we show that,for non-compliant keystores, brute-forcing can be up to threeorders of magnitude faster with respect to the most compliantkeystore. Additionally, when an attacker can tamper with thekeystore file, some implementations are vulnerable to denial ofservice attacks or, in the worst case, arbitrary code execution.Finally we discuss the fixes implemented by Oracle and BouncyCastle developers following our responsible disclosure.
+						</p>
+					</details>
+				</li>
+				<li>
+					<strong>Surviving the Web: A Journey into Web Session Security</strong>. ACM Computing Surveys (CSUR). 2017.
+					<br>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="/data/papers/CSUR17_surviving_the_web.pdf">paper</a>
+						</summary>
+						<p>
+							We survey the most common attacks against web sessions, i.e., attacks which target honest web browser users establishing an authenticated session with a trusted web application. We then review existing security solutions which prevent or mitigate the different attacks, by evaluating them along four different axes: protection, usability, compatibility and ease of deployment. Based on this survey, we identify five guidelines that, to different extents, have been taken into account by the designers of the different proposals we reviewed. We believe that these guidelines can be helpful for the development of innovative solutions approaching web security in a more systematic and comprehensive way.
+						</p>
+					</details>
+					</li>
+				<li>
+					<strong>Run-time Attack Detection in Cryptographic APIs</strong>. 30th Computer Security Foundations Symposium (CSF 2017). 2017.
+					<br>R. Focardi, M. Squarcina.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="/data/papers/CSF17_runtime_attack_detection_crypto_api.pdf">paper</a> <a class="paper-item" href="/data/papers/CSF17_runtime_attack_detection_crypto_api-slides.pdf">slides</a>
+						</summary>
+						<p>
+							Cryptographic APIs are often vulnerable to attacks that compromise sensitive cryptographic keys. In the literature we find many proposals for preventing or mitigating such attacks but they typically require to modify the API or to configure it in a way that might break existing applications. This makes it hard to adopt such proposals, especially because security APIs are often used in highly sensitive settings, such as financial and critical infrastructures, where systems are rarely modified and legacy applications are very common. In this paper we take a different approach. We propose an effective method to monitor existing cryptographic systems in order to detect, and possibly prevent, the leakage of sensitive cryptographic keys. The method collects logs for various devices and cryptographic services and is able to detect, offline, any leakage of sensitive keys, under the assumption that a key fingerprint is provided for each sensitive key. We define key security formally and we prove that the method is sound, complete and efficient. We also show that without key fingerprinting completeness is lost, i.e., some attacks cannot be detected. We discuss possible practical implementations and we develop a proof-of-concept log analysis tool for PKCS#11 that is able to detect, on a significant fragment of the API, all key-management attacks from the literature.
+						</p>
+					</details>
+					</li>
+				<li>
+					<strong>Gran: model checking grsecurity RBAC policies</strong>. 25th Computer Security Foundations Symposium (CSF 2012). 2012.
+					<br>M. Bugliesi, S. Calzavara, R. Focardi, M. Squarcina.<br>
+					<details>
+						<summary>
+							<a class="paper-item" href="/data/papers/CSF12_gran_model_checking_grsecurity_RBAC_policies.pdf">paper</a>
+						</summary>
+						<p>
+							Role-based Access Control (RBAC) is one of the most widespread security mechanisms in use today. Given the growing complexity of policy languages and access control systems, verifying that such systems enforce the desired invariants is recognized as a security problem of crucial importance. In the present paper, we develop a framework for the formal verification of grsecurity, an access control system developed on top of Unix/Linux systems. The verification problem in grsecurity presents much of the complexity of modern RBAC systems, due to the presence of policy state changes that may arise both from explicit administrative primitives supported by grsecurity, and as the result of the interaction with the underlying operating system facilities. We develop a formal semantics for grsecurity's RBAC system, based on a labelled transition system, and a sound abstraction of that semantics providing a bounded approximation, amenable to model checking. We report on the result of the experimental analysis conducted with gran, the model checker we implemented based on our abstract semantics, on existing public servers running grsecurity to implement their RBAC systems.
+						</p>
+					</details>
+					</li>
+			</ul>
+			<p>More on my <a href="https://scholar.google.com/citations?user=squarcina">scholar profile</a>.</p>
+		</section>
+
+		<section id="theses">
+			<h2>Students &amp; Theses</h2>
+			<p>If you are interested in doing a thesis with me, please follow <a href="https://secpriv.wien/theses/">these instructions</a>. I'll be happy to reply!</p>
+			<p>Recently supervised students:
+				<ul>
+					<li>Alex Ploner, ongoing (with Mauro Tempesta)</li>
+					<li>Clemens Holter, ongoing</li>
+					<li>Alina Schärmer, ongoing</li>
+					<li>Paul Florian Sattleger, ongoing (with Martina Lindorfer and Jakob Bleier)</li>
+					<li>Adrian Chroust, Understanding the shortcomings of the Public Suffix List (supervised with Carlotta Tagliaro).</li>
+					<li>Bernhard Kralofsky, Exploration of Logic Vulnerabilities in Frameworks Implementing CSRF Protections.</li>
+					<li>Matthias Prader, Understanding the shortcomings of the Public Suffix List.</li>
+					<li>Philipp Beer, The Broken Bridge between Web Applications and Mobile Platforms (supervised with Martina Lindorfer).</li>
+					<li>Patric Gruber, Protex: Towards Automated HTTP-based Protocol Extraction from Traffic Captures.</li>
+				</ul>
+			</p>
+		</section>
+
+		<section id="projects">
+			<h2>Active Projects</h2>
+			<ul>
+				<li>
+					<a href="https://www.wwtf.at/funding/programmes/ict/ICT22-060/">WWTF ICT22-060</a>, <strong>Fixing the Broken Bridge Between Mobile Apps and the Web</strong>.<br>
+					Duration 48 months (2023 - 2027), funding amount: €&nbsp;798.760.<br>
+					Co-PI with Martina Lindorfer
+				</li>
+			</ul>
+			<p>We are hiring! Send me an email if you are interested in working with us!</p>
+		</section>
+
+		<section id="media">
+			<h2>Media</h2>
+			<ul>
+				<li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles/news/internetsicherheit-gefahr-durch-namenlose-cookies">Internet Security: the Danger of Nameless Cookies</a>. TU Wien news, 2023</li>
+				<li><a href="https://itspmagazinepodcast.com/episodes/cookie-crumbles-unveiling-web-session-integrity-vulnerabilities-a-conversation-with-pedro-adao-and-marco-squarcina-las-vegas-black-hat-2023-event-coverage-redefining-cybersecurity-podcast-with-sean-martin-and-marco-ciappelli-TraZaXWr">Cookie Crumbles: Unveiling Web Session Integrity Vulnerabilities</a>. Redefining CyberSecurity Podcast, 2023</li>
+				<li><a href="https://informatics.tuwien.ac.at/news/2357">Capture the Flag: Can You Handle the Heat?</a> TU Wien Informatics, 2023</li>
+				<li><a href="https://informatics.tuwien.ac.at/news/2291">ECSC: The ‘Eurovision’ of Cyber Security</a>. TU Wien Informatics, 2022</li>
+				<li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles/news/the-hackers-and-me-studying-hacking">The hackers and me: Studying Hacking?</a> TU Wien news, 2022</li>
+				<li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles/news/the-hackers-and-me-hacking-and-politics">The Hackers and Me: Hacking and Politics</a>. TU Wien news, 2022</li>
+				<li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles/news/die-hacker-und-ich-das-passwort">The hackers and me: The password</a>. TU Wien news, 2021</li>
+				<li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles/news/gefahr-aus-der-subdomain-1">Danger Caused by Subdomains</a>. TU Wien news, 2021</li>
+				</li>
+			</ul>
+		</section>
+
+		<section id="talks">
+			<h2>Recorded Talks</h2>
+			<ul>
+				<li><strong>Cookie Crumbles: Unveiling Web Session Integrity Vulnerabilities</strong>. Black Hat USA, 2023</li>
+				<li><strong><a href="https://www.youtube.com/watch?v=ni6liLjeHe8">Breaking the Boundaries: Related-Domain Attackers in the Modern Web</a></strong>. SINFO 28, 2021</li>
+				<li><strong><a href="https://www.youtube.com/watch?v=OzRZVZZSoRI">Hack the ______! Conquering Flags on the World's Stage</a></strong>. No Hat, 2019</li>
+				</li>
+			</ul>
 		</section>
 
 		<section id="vulns">
-			<div class="vertical-center">
-				<h2>Selected Vulns <span class="fas fa-bug"></span></h2>
+				<h2>Selected CVEs</h2>
 				<ul>
-					<li>Vulnerability in the third-party domain connection feature on Shopify, see the <a href="https://minimalblue.com/data/papers/USENIX21_can_i_take_your_subdomain.pdf">paper</a></li>
-					<li><a href="https://gsuiteupdates.googleblog.com/2018/04/more-secure-sign-in-chrome.html">SAML2.0, Login CSRF on Google</a></li>
-					<li><a href="https://www.oracle.com/technetwork/topics/security/cpuapr2018-3678067.html">CVE-2018-2794</a>, Oracle Java, CVSS 3.0 Base Score 7.7 (HIGH)</li>
-					<li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10356</a>, Oracle Java, CVSS 3.0 Base Score 6.2 (MEDIUM)</li>
-					<li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10345</a>, Oracle Java, CVSS 3.0 Base Score 3.1 (LOW)</li>
+					<li>Safari <a href="#">CVE-2023-38592</a></li>
+					<li>Werkzeug <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23934">CVE-2023-23934</a></li>
+					<li>Firefox <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-29547">CVE-2023-29547</a></li>
+					<li>Fastify <a href="https://github.com/fastify/fastify-passport/security/advisories/GHSA-2ccf-ffrj-m4qw">CVE-2023-29020</a>, <a href="https://github.com/fastify/csrf-protection/security/advisories/GHSA-qrgf-9gpc-vrxw">CVE-2023-27495</a>,  <a href="https://github.com/fastify/fastify-passport/security/advisories/GHSA-4m3m-ppvx-xgw9">CVE-2023-29019</a></li>
+					<li>PHP <a href="https://bugs.php.net/bug.php?id=81727">CVE-2022-31629</a></li>
+					<li>ReactPHP <a href="https://github.com/reactphp/http/security/advisories/GHSA-w3w9-vrf5-8mx8">CVE-2022-36032</a></li>
+					<li>Passport <a href="https://security.snyk.io/vuln/SNYK-JS-PASSPORT-2840631">CVE-2022-25896</a></li>
+					<li>Symfony <a href="https://symfony.com/blog/cve-2022-24895-csrf-token-fixation">CVE-2022-24895</a></li>
+					<li>CodeIgniter <a href="https://github.com/advisories/GHSA-5hm8-vh6r-2cjq">CVE-2022-35943</a></li>
+					<li>Oracle JDK <a href="https://www.oracle.com/technetwork/topics/security/cpuapr2018-3678067.html">CVE-2018-2794</a>, <a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10356</a>, <a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10345</a></li>
 				</ul>
-			</div>
 		</section>
 	  
 		<section id="music">
-			<div class="vertical-center">
-				<h2>Music <span class="fas fa-music"></span></h2>
+				<h2>Music</h2>
 				<p>I'm a jungle/drum'n'bass DJ, still using turntables and carrying around a 30kg record bag. You can find a selection of my old dj sets on <a href="https://www.mixcloud.com/lavish/">mixcloud</a>. More recently I've started streaming on <a href="https://www.twitch.tv/blueminimal">Twitch</a>, follow me if you want to be notified when I go live.</p>
-			</div>
 		</section>
+		</div>
 	</main>
 
 </body>

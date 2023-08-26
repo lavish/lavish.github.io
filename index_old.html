@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MinimalBlue</title>
+	<meta name="author" content="Marco Squarcina">
+	<meta name="description" content="Marco Squarcina personal website">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Titillium+Web&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			color: #eee;
+			background: #000;
+			font-family: 'Titillium Web', sans-serif;
+		}
+
+		a, a:active, a:hover, a:enabled {
+			color: inherit;
+			background-color: rgba(255, 255, 255, 0.05);
+			border-radius: 3px;
+			padding: 0.1em 0.2em;
+			text-decoration: underline;
+		}
+
+		a.fab {
+			text-decoration: none;
+			background: none;
+		}
+
+		nav {
+			text-align: center;
+			font-family: 'Major Mono Display', monospace;
+		}
+
+		#navigation {
+			position: fixed;
+			top: 0; 
+			left: 0;
+			z-index: 99;	
+			margin: 0 auto;
+			padding: 1em 10% .5em 10%;
+			width: 100%;
+			min-height: 3%;
+			list-style: none;
+			text-align: left;
+			background: linear-gradient(to bottom, rgba(34,34,34,0.9) 0%, rgba(34,34,34,0) 100%); 
+		}
+
+		#navigation li {
+			float: left;
+			text-align: center;
+			margin: 0;
+			padding: 0 1em 0 0;
+		}
+
+		#navigation li a, #navigation li a:link, #navigation li a:visited {
+			text-decoration: none;
+			display: block;
+			font-weight: bold;
+			padding: 0.2em;
+			margin: 0;
+			font-size: 1.4em;
+			background: none;
+		}
+
+		/* #navigation li a:hover, #navigation li a:focus, #navigation li a:active {
+			text-decoration: underline;
+		} */
+
+		main,
+		section {
+			position: relative;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			background: black;
+		}
+
+		section {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0 10%;
+			font-size: 1.4em;
+			line-height: 1.5em;
+			display: table;
+			overflow: scroll;
+		}
+
+		.vertical-center {
+			display: table-cell; vertical-align: middle;
+		}
+
+		section h2 {
+			font-family: 'Major Mono Display', monospace;
+			margin-top: 2em;
+			padding-top: 0;
+			font-size: 1.5em;
+			text-align: left;
+			line-height: 2rem;
+		}
+
+		section p {	
+			text-align: justify;
+		}
+
+		img {
+			width: 100%;
+			filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.4));
+		}
+
+		@media only screen and (min-width : 768px) {
+			section h2 {
+				font-size: 2em;
+			}
+
+			img {
+				float: right;
+				width: 25%;
+				margin: 0 0 1% 3%;
+			}
+		}
+		 
+		#about {
+			background: #0B94C1;
+			animation: background-1 15s infinite;
+		}
+		 
+		#research {
+			background: #0866A5;
+			animation: background-2 15s infinite;
+		}
+
+		#service {
+			background: #254189;
+			animation: background-3 15s infinite;
+		}
+		 
+		#teaching {
+			background: #5C27A6;
+			animation: background-4 15s infinite;
+		}
+
+		#vulns { 
+			background: #7D00BC;
+			animation: background-5 15s infinite;
+		}
+
+		#music {
+			background: #c712a0;
+			animation: background-6 15s infinite;
+		}
+
+		@keyframes background-1 {
+			0%   { background-color: #0B94C1; }
+			17%  { background-color: #0866A5; }  
+			34%  { background-color: #254189; }
+			50%  { background-color: #5C27A6; }
+			66%  { background-color: #7D00BC; }
+			83%  { background-color: #c712a0; }
+			100% { background-color: #0B94C1; }
+		}
+
+		@keyframes background-2 {
+			0%   { background-color: #0866A5; }  
+			17%  { background-color: #254189; }
+			34%  { background-color: #5C27A6; }
+			50%  { background-color: #7D00BC; }
+			66%  { background-color: #c712a0; }
+			83%  { background-color: #0B94C1; }
+			100% { background-color: #0866A5; }
+		}
+
+		@keyframes background-3 {
+			0%   { background-color: #254189; }
+			17%  { background-color: #5C27A6; }
+			34%  { background-color: #7D00BC; }
+			50%  { background-color: #c712a0; }
+			66%  { background-color: #0B94C1; }
+			83%  { background-color: #0866A5; }
+			100% { background-color: #254189; }
+		}
+
+		@keyframes background-4 {
+			0%   { background-color: #5C27A6; }
+			17%  { background-color: #7D00BC; }
+			34%  { background-color: #c712a0; }
+			50%  { background-color: #0B94C1; }
+			66%  { background-color: #0866A5; }
+			83%  { background-color: #254189; }
+			100% { background-color: #5C27A6; }
+		}
+
+		@keyframes background-5 {
+			0%   { background-color: #7D00BC; }
+			17%  { background-color: #c712a0; }
+			34%  { background-color: #0B94C1; }
+			50%  { background-color: #0866A5; }
+			66%  { background-color: #254189; }
+			83%  { background-color: #5C27A6; }
+			100% { background-color: #7D00BC; }
+		}
+
+		@keyframes background-6 {
+			0%   { background-color: #c712a0; }
+			17%  { background-color: #0B94C1; }
+			34%  { background-color: #0866A5; }
+			50%  { background-color: #254189; }
+			66%  { background-color: #5C27A6; }
+			83%  { background-color: #7D00BC; }
+			100% { background-color: #c712a0; }
+		}
+  </style>
+</head>
+ 
+<body>
+
+	<nav>	
+		<ul id="navigation">
+			<li><a href="#about"><span class="fas fa-child"></span></a></li>
+			<li><a href="#research"><span class="fas fa-flask"></span></a></li>
+			<li><a href="#service"><span class="fab fa-readme"></span></a></li>
+			<li><a href="#teaching"><span class="fas fa-chalkboard-teacher"></span></a></li>
+			<li><a href="#vulns"><span class="fas fa-bug"></span></a></li>
+			<li><a href="#music"><span class="fas fa-music"></span></a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<section id="about">
+			<div class="vertical-center">
+				<h2>Hi there</h2>
+				<img src="data/me.jpg" alt="Marco">
+				<p>My name is Marco Squarcina, I'm a Senior Scientist in the <a href="https://secpriv.wien">Research Unit Security and Privacy</a> at <a href="https://tuwien.at">TU Wien</a>. My research interests focus mainly on Web and mobile security, but I'm passionate about computer security and hacking in its broadest sense. I love teaching, and I strongly support the concept of learning by doing. I play and organise <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">CTF competitions</a> with <a href="https://w0y.at">w0y</a> and <a href="https://mhackeroni.it">mhackeroni</a> with whom I competed 3 times at the finals of <a href="https://defcon.org/html/links/dc-ctf.html">DEF CON CTF</a>. I co-organized the <a href="https://cyberchallenge.it/">Italian Cyber Challenge</a> project, trained Team Europe for the <a href="https://www.enisa.europa.eu/topics/cybersecurity-education/international-cybersecurity-challenge-icc/team-europe-icc2022">International Cybersecurity Challenge</a> (ICC 2022), and coordinated the largest Attack/Defense CTF in the history of the <a href="https://ecsc.eu/">European Cybersecurity Challenge</a> (ECSC 2022) by the <a href="https://www.enisa.europa.eu/">European Union Agency for Cybersecurity</a> (ENISA).</p>
+				<p>The best way to get in touch with me is by <a href="mailto:marco.squarcina@tuwien.ac.at">e-mail</a>. Please use my <a href="/data/pubkey.asc">PGP key</a> if you need to send sensitive data. You can also reach me by phone at +43 (1) 58801-192607, or in my office at Favoritenstrasse 9-11, Stiege 2, 1. Stock, 1040 Wien.</p>
+                <p><a href="https://twitter.com/blueminimal" class="fab fa-twitter"></a> <a rel="me" href="https://infosec.exchange/@minimalblue" class="fab fa-mastodon"></a> <a href="https://facebook.com/marco.squarcina" class="fab fa-facebook-f"></a> <a href="https://www.linkedin.com/in/squarcina" class="fab fa-linkedin-in"></a></p>
+			</div>
+		</section>
+	 
+		<section id="research">
+			<div class="vertical-center">
+				<h2>Selected Publications <span class="fas fa-flask"></span></h2>
+				<ul>
+					<li>
+						<strong>Cookie Crumbles: Breaking and Fixing Web Session Integrity</strong>. USENIX Security. 2023. <a href="https://github.com/SecPriv/cookiecrumbles">paper/artifact</a> <a href="/data/papers/USENIX23_cookie_crumbles.txt">bibtex</a> (slides <a href="/data/papers/BHUSA23_cookie_crumbles-slides.pdf">BlackHat USA</a>/<a href="/data/papers/USENIX23_cookie_crumbles-slides.pdf">USENIX</a>)
+						<br>M. Squarcina, P. Adao, L. Veronese, M. Maffei.
+					</li>
+					<li>
+						<strong>WebSpec: Towards Machine-Checked Analysis of Browser Security Mechanisms</strong>. IEEE Symposium on Security and Privacy (S&amp;P). 2023. <a href="https://arxiv.org/abs/2201.01649">preprint</a> <a href="/data/papers/SP23_webspace.txt">bibtex</a>
+						<br>L. Veronese, B. Farinier, P. Bernardo, M. Tempesta, M. Squarcina, M. Maffei.
+					</li>
+					<li>
+						<strong>The Bridge between Web Applications and Mobile Platforms is Still Broken</strong>. Workshops of the IEEE Symposium on Security and Privacy (SecWeb). 2022. <a href="/data/papers/SECWEB22_broken_bridge.pdf">pdf</a> <a href="/data/papers/SECWEB22_broken_bridge.txt">bibtex</a>
+						<br>P. Beer, L. Veronese, M. Squarcina, M. Lindorfer.
+					</li>
+					<li>
+						<strong>Can I Take Your Subdomain? Exploring Same-Site Attacks in the Modern Web</strong>. USENIX Security. 2021. <a href="/data/papers/USENIX21_can_i_take_your_subdomain.pdf">pdf</a> <a href="/data/papers/USENIX21_can_i_take_your_subdomain.txt">bibtex</a> <a href="https://canitakeyoursubdomain.name/">website</a>
+						<br>M. Squarcina, M. Tempesta, L. Veronese, S. Calzavara, M. Maffei.
+						</li>
+					<li>
+						<strong>The Remote on the Local: Exacerbating Web Attacks Via Service Workers Caches</strong>. 15th IEEE Workshop on Offensive Technologies (WOOT 21). 2021. <a href="/data/papers/WOOT21_swcacheattack.pdf">pdf</a> <a href="/data/papers/WOOT21_swcacheattack.txt">bibtex</a> <a href="https://swcacheattack.secpriv.wien/">website</a>
+						<br>M. Squarcina, S. Calzavara, M. Maffei.
+						</li>
+					<li>
+						<strong>Postcards from the Post-HTTP World: Amplification of HTTPS Vulnerabilities in the Web Ecosystem</strong>. IEEE Symposium on Security and Privacy (S&amp;P). 2019. <a href="/data/papers/SP19_postcards_from_the_post_HTTP_world.pdf">pdf</a> <a href="https://secgroup.github.io/tlswebscan/">website</a>
+						<br>S. Calzavara, R. Focardi, M. Nemec, A. Rabitti, M. Squarcina.
+						</li>
+					<li>
+						<strong>WPSE: Fortifying Web Protocols via Browser-Side Security Monitoring</strong>. USENIX Security. 2018. <a href="https://arxiv.org/pdf/1806.09111.pdf">arXiv</a> <a href="/data/papers/USENIX18_wpse.pdf">pdf</a> <a href="/data/papers/USENIX18_wpse-slides.pdf">slides</a>
+						<br>S. Calzavara, R. Focardi, M. Maffei, C. Schneidewind, M. Squarcina, M. Tempesta.
+						</li>
+					<li>
+						<strong>Mind Your Keys? A Security Evaluation of Java Keystores</strong>. Network and Distributed System Security Symposium (NDSS 2018). 2018. <a href="/data/papers/NDSS2018_mind_your_keys.pdf">pdf</a> <a href="/data/papers/NDSS2018_mind_your_keys-slides.pdf">slides</a> <a href="https://www.youtube.com/watch?v=JtFJuxRC56s">video</a>
+						<br>R. Focardi, F. Palmarini, G. Steel, M. Squarcina, M. Tempesta.
+						
+					</li>
+					<li><strong>Surviving the Web: A Journey into Web Session Security</strong>. ACM Computing Surveys (CSUR). 2017. Pre-print version: <a href="/data/papers/CSUR17_surviving_the_web.pdf">pdf</a>
+						<br>S. Calzavara, R. Focardi, M. Squarcina, M. Tempesta.
+						</li>
+					<li>
+						<strong>Run-time Attack Detection in Cryptographic APIs</strong>. 30th Computer Security Foundations Symposium (CSF 2017). 2017. <a href="/data/papers/CSF17_runtime_attack_detection_crypto_api.pdf">pdf</a> <a href="/data/papers/CSF17_runtime_attack_detection_crypto_api-slides.pdf">slides</a>
+						<br>R. Focardi, M. Squarcina.
+						</li>
+					<li>
+						<strong>Gran: model checking grsecurity RBAC policies</strong>. 25th Computer Security Foundations Symposium (CSF 2012). 2012. <a href="/data/papers/CSF12_gran_model_checking_grsecurity_RBAC_policies.pdf">pdf</a>
+						<br>M. Bugliesi, S. Calzavara, R. Focardi, M. Squarcina.
+						</li>
+				</ul>
+				<p>My <a href="https://scholar.google.com/citations?user=squarcina">scholar profile</a>.</p>
+			</div>
+		</section>
+
+		<section id="service">
+			<div class="vertical-center">
+				<h2>Recent Academic Service <span class="fab fa-readme"></span></h2>
+				<ul>
+					<li><a href="https://www.ieee-security.org/TC/SP2024/">IEEE S&amp;P 2024</a>, IEEE Symposium on Security and Privacy. PC member</li>
+					<li><a href="https://www.acsac.org/">ACSAC 2023</a>, Annual Computer Security Applications Conference (ACSAC). PC member</li>
+					<li><a href="https://wootconference.org/">WOOT 2022-2023</a>, IEEE Workshop on Offensive Technologies, co-located with IEEE S&amp;P. PC member and Reproducibility chair (2023)</li>
+					<li><a href="https://secweb.work/">SecWeb 20021-2023</a>, Workshop on Web Security, co-located with IEEE S&amp;P. PC member</li>
+					<li><a href="https://madweb.work/">MADWeb 2023</a>, Workshop on Measurements, Attacks, and Defenses for the Web, co-located with NDSS 2023. PC member</li>
+					<li><a href="https://concordia-h2020.eu/eurosec-2023/">EuroSec 2022-2023</a>, European Workshop on System Security, co-located with EuroSys. PC member, Publicity Chair (2022)</li>
+					<li><a href="https://www2022.thewebconf.org/">TheWebConf 2022</a>, The Web Conference (formerly WWW conference). PC member</li>
+					<li><a href="https://www.usenix.org/conference/usenixsecurity22">USENIX Security 2022</a>, AEC member</li>
+					<li><a href="https://www.nics.uma.es/stm2021/">STM 2021</a>, Workshop on Security and Trust Management co-located with ESORICS 2021. PC member</li>
+					<li><a href="https://www.ieee-csr.org/workshops/ds4cs/">CSR DS4CS 2021</a>, IEEE CSR Workshop on Data Science for Cyber Security. PC member</li>
+					<li><a href="https://www.frontiersin.org/journals/computer-science">Frontiers in Computer Science</a>, Springer. Review Editor for Computer Security</li>
+					<li><a href="https://academic.oup.com/comjnl">The Computer Journal</a>, Oxford University Press. Reviewer</li>
+					<li><a href="https://academic.oup.com/cybersecurity">Journal of Cybersecurity</a>, Oxford University Press. Reviewer</li>
+					<li>External reviewer for USENIX Security, IEEE S&amp;P, NDSS, CCS.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="teaching">
+			<div class="vertical-center">
+				<h2>Teaching <span class="fas fa-chalkboard-teacher"></span></h2>
+				<ul>
+					<li>2020&mdash;now (WS): lecturer, <a href="https://tiss.tuwien.ac.at/course/courseDetails.xhtml?dswid=5401&dsrid=616&courseNr=192111&semester=2022W">Attacks and Defenses in Computer Security (UE) [192.111]</a>, TU Wien</li>
+
+					<li>2019&mdash;now (SS): lecturer, <a href="https://tiss.tuwien.ac.at/course/courseDetails.xhtml?courseNr=192082&dswid=5500&dsrid=923">Introduction to Security (UE) [192.082]</a>, TU Wien</li>
+
+					<li>2019&mdash;now (SS): lecturer, <a href="https://tiss.tuwien.ac.at/course/courseDetails.xhtml?dswid=9415&dsrid=191&courseNr=184783">Introduction to Security (VU) [184.783]</a>, TU Wien</li>
+
+					<li>2020/21 (WS): lecturer, <a href="https://tiss.tuwien.ac.at/course/courseDetails.xhtml?dswid=3457&dsrid=264&courseNr=192112&semester=2021W">Systems and Applications Security (VU) [192.112]</a>, TU Wien</li>
+					
+					<li>2019 (WS): guest lecturer, <a href="https://tiss.tuwien.ac.at/course/courseDetails.xhtml?dswid=1036&dsrid=557&courseNr=192091&semester=2019W">Advanced Internet Security (VU) [192.091]</a>, TU Wien</li>
+					
+					<li>2019 (WS): lecturer, <a href="https://tiss.tuwien.ac.at/course/courseDetails.xhtml?dswid=1036&dsrid=736&courseNr=192092&semester=2019W">Capture the Flag (SE) [192.092]</a>, TU Wien</li>
+					
+					<li>2015/16, 2017/18: teaching assistant, <a href="https://secgroup.dais.unive.it/teaching/security-course/">Security 1 [CM0475], Security 2 [CM0494]</a>, Ca' Foscari University of Venice</li>
+					
+					<li>2013/14, 2014/15: teaching assistant, Security of Computer Systems [CM0288], Ca' Foscari University of Venice</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="vulns">
+			<div class="vertical-center">
+				<h2>Selected Vulns <span class="fas fa-bug"></span></h2>
+				<ul>
+					<li>Vulnerability in the third-party domain connection feature on Shopify, see the <a href="https://minimalblue.com/data/papers/USENIX21_can_i_take_your_subdomain.pdf">paper</a></li>
+					<li><a href="https://gsuiteupdates.googleblog.com/2018/04/more-secure-sign-in-chrome.html">SAML2.0, Login CSRF on Google</a></li>
+					<li><a href="https://www.oracle.com/technetwork/topics/security/cpuapr2018-3678067.html">CVE-2018-2794</a>, Oracle Java, CVSS 3.0 Base Score 7.7 (HIGH)</li>
+					<li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10356</a>, Oracle Java, CVSS 3.0 Base Score 6.2 (MEDIUM)</li>
+					<li><a href="http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html">CVE-2017-10345</a>, Oracle Java, CVSS 3.0 Base Score 3.1 (LOW)</li>
+				</ul>
+			</div>
+		</section>
+	  
+		<section id="music">
+			<div class="vertical-center">
+				<h2>Music <span class="fas fa-music"></span></h2>
+				<p>I'm a jungle/drum'n'bass DJ, still using turntables and carrying around a 30kg record bag. You can find a selection of my old dj sets on <a href="https://www.mixcloud.com/lavish/">mixcloud</a>. More recently I've started streaming on <a href="https://www.twitch.tv/blueminimal">Twitch</a>, follow me if you want to be notified when I go live.</p>
+			</div>
+		</section>
+	</main>
+
+</body>
+</html>
