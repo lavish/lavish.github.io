@@ -26,7 +26,7 @@
 			color: #fff;
 			background: transparent;
 			font-family: 'Titillium Web', sans-serif;
-			font-size: 1.1rem;
+			font-size: 1rem;
 		}
 
 		body {
@@ -57,7 +57,7 @@
 		}
 
 		#navigation {
-			position: fixed;
+			position: relative;
 			top: 0; 
 			left: 0;
 			z-index: 99;	
@@ -70,7 +70,7 @@
 		}
 
 		#navigation li {
-			display: inline;
+			display: inline-block;
 			margin: 0;
 			padding: 0 1em 0 0;
 		}
@@ -93,11 +93,10 @@
 			display: flex;
             flex-flow: row wrap;
 			margin: 0;
-			margin-bottom: 5em;
 			align-items: center;
 			justify-content: center;
 			column-gap: 3%;
-			padding: 3em 10%;
+			padding: 3em 0%;
 			background-color: var(--container-bg-color);
 		}
 
@@ -107,7 +106,7 @@
 			line-height: 1.5em;
 			color: #aaa;
 			margin-bottom: 2em;
-			padding: 0em 3em 1em 3em;
+			padding: 0em 1em 1em 1em;
 			background-color: rgba(0, 0, 0, 0.4);
 		}
 
@@ -166,14 +165,35 @@
 				width: 25%;
 				margin: 0 0 1% 3%;
 			}
+
+			#navigation {
+				position: fixed;
+			}
+
+			#navigation li {
+				display: inline;
+			}
+
+			.container {
+				padding: 3em 10%;
+			}
+
+			.container section {
+				padding: 0em 3em 1em 3em;
+			}
+
+			#about {
+				width: 80%;
+				padding: 0 10%;
+			}
 		}
 		
 		#about {
 			display: table;
 			overflow: scroll;
 			height: 100%;
-			width: 80%;
-			padding: 0 10%;
+			width: 90%;
+			padding: 0 5%;
 			font-size: 1.2em;
 			box-shadow: 0 0 3rem rgba(0, 0, 0, 0.8);
 			color: #fff;
