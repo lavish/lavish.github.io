@@ -87,6 +87,18 @@
 				<h2>Selected Publications</h2>
 				<ul>
 					<li>
+						<strong>Web Platform Threats: Automated Detection of Web Security Issues With WPT</strong>. USENIX Security. 2024.<br>
+						P. Bernardo, L. Veronese, V. Valle, S. Calzavara, M. Squarcina, P. Adão, M. Maffei.<br>
+						<details>
+							<summary>
+								TBA
+							</summary>
+							<p>
+								Client-side security mechanisms implemented by Web browsers, such as cookie security attributes and the Mixed Content policy, are of paramount importance to protect Web applications. Unfortunately, the design and implementation of such mechanisms are complicated and error-prone, potentially exposing Web applications to security vulnerabilities. In this paper, we present a practical framework to formally and automatically detect security flaws in client-side security mechanisms. In particular, we leverage Web Platform Tests (WPT), a popular cross-browser test suite, to automatically collect browser execution traces and match them against Web invariants, i.e., intended security properties of Web mechanisms expressed in first-order logic. We demonstrate the effectiveness of our approach by validating 9 invariants against the WPT test suite, discovering violations with clear security implications in 104 tests for Firefox, Chromium and Safari. We disclosed the root causes of these violations to browser vendors and standard bodies, which resulted in 8 individual reports and one CVE on Safari.
+							</p>
+						</details>
+					</li>
+					<li>
 						<strong>Tabbed Out: Subverting the Android Custom Tab Security Model</strong>. IEEE Symposium on Security and Privacy (S&amp;P). 2024.<br>
 						P. Beer, M. Squarcina, L. Veronese, M. Lindorfer.<br>
 						<details>
@@ -244,7 +256,7 @@
 						<li>Alina Schärmer, ongoing</li>
 						<li>Paul Florian Sattleger, ongoing (with Martina Lindorfer and Jakob Bleier)</li>
 						<li>Adrian Chroust, A Cross-platform Analysis of the HbbTV Standard (supervised with Carlotta Tagliaro).</li>
-						<li>Bernhard Kralofsky, Exploration of Logic Vulnerabilities in Frameworks Implementing CSRF Protections.</li>
+						<li>Bernhard Kralofsky, Exploration of Logic Vulnerabilities in Frameworks Implementing CSRF Protections (supervised with Lorenzo Veronese).</li>
 						<li>Matthias Prader, Understanding the shortcomings of the Public Suffix List.</li>
 						<li>Philipp Beer, The Broken Bridge between Web Applications and Mobile Platforms (supervised with Martina Lindorfer).</li>
 						<li>Patric Gruber, Protex: Towards Automated HTTP-based Protocol Extraction from Traffic Captures.</li>
@@ -267,10 +279,12 @@
 			<section id="media">
 				<h2>Media</h2>
 				<ul>
+					<li><a href="https://futurezone.at/digital-life/austria-cyber-security-challenge-2024-start-teilnehme-anmeldung-bedingungen-erklaert-hacker/402780391">Austria Cyber Security Challenge 2024 startet: Neuer Modus fordert Hacker</a>. Futurezone, 2024</li>
+					<li><a href="https://informatics.tuwien.ac.at/news/2569">From Classroom to Cyberfront: Capture the Flag</a> TU Wien Informatics, 2024</li>
 					<li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles/news/internetsicherheit-gefahr-durch-namenlose-cookies">Internet Security: the Danger of Nameless Cookies</a>. TU Wien news, 2023</li>
 					<li><a href="https://itspmagazinepodcast.com/episodes/cookie-crumbles-unveiling-web-session-integrity-vulnerabilities-a-conversation-with-pedro-adao-and-marco-squarcina-las-vegas-black-hat-2023-event-coverage-redefining-cybersecurity-podcast-with-sean-martin-and-marco-ciappelli-TraZaXWr">Cookie Crumbles: Unveiling Web Session Integrity Vulnerabilities</a>. Redefining CyberSecurity Podcast, 2023</li>
 					<li><a href="https://informatics.tuwien.ac.at/news/2357">Capture the Flag: Can You Handle the Heat?</a> TU Wien Informatics, 2023</li>
-					<li><a href="https://informatics.tuwien.ac.at/news/2291">ECSC: The ‘Eurovision’ of Cyber Security</a>. TU Wien Informatics, 2022</li>
+					<li><a href="https://informatics.tuwien.ac.at/news/2291">ECSC: The 'Eurovision' of Cyber Security</a>. TU Wien Informatics, 2022</li>
 					<li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles/news/the-hackers-and-me-studying-hacking">The hackers and me: Studying Hacking?</a> TU Wien news, 2022</li>
 					<li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles/news/the-hackers-and-me-hacking-and-politics">The Hackers and Me: Hacking and Politics</a>. TU Wien news, 2022</li>
 					<li><a href="https://www.tuwien.at/en/tu-wien/news/news-articles/news/die-hacker-und-ich-das-passwort">The hackers and me: The password</a>. TU Wien news, 2021</li>
@@ -290,9 +304,10 @@
 			<section id="vulns">
 				<h2>Selected CVEs</h2>
 				<ul>
-					<li>Safari <a href="#">CVE-2023-38592</a></li>
+					<li>Safari <a href="#">CVE-2023-38592</a>, <a href="#">CVE-2024-23284</a></li>
+					<li>Firefox <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-29547">CVE-2023-29547</a>, <a href="#">CVE-2023-4055</a></li>
+					<li>Chrome <a href="https://issues.chromium.org/issues/41485789">CVE-2024-1672</a></li>
 					<li>Werkzeug <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-23934">CVE-2023-23934</a></li>
-					<li>Firefox <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-29547">CVE-2023-29547</a></li>
 					<li>Fastify <a href="https://github.com/fastify/fastify-passport/security/advisories/GHSA-2ccf-ffrj-m4qw">CVE-2023-29020</a>, <a href="https://github.com/fastify/csrf-protection/security/advisories/GHSA-qrgf-9gpc-vrxw">CVE-2023-27495</a>,  <a href="https://github.com/fastify/fastify-passport/security/advisories/GHSA-4m3m-ppvx-xgw9">CVE-2023-29019</a></li>
 					<li>PHP <a href="https://bugs.php.net/bug.php?id=81727">CVE-2022-31629</a></li>
 					<li>ReactPHP <a href="https://github.com/reactphp/http/security/advisories/GHSA-w3w9-vrf5-8mx8">CVE-2022-36032</a></li>
