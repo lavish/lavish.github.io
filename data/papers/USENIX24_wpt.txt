@@ -1,0 +1,12 @@
+@inproceedings{BernardoVVCSAM24,
+    author    = {Pedro Bernardo and
+                 Lorenzo Veronese and
+                 Valentino Dalla Valle and
+                 Stefano Calzavara and
+                 Marco Squarcina and
+                 Pedro Adão and
+                 Matteo Maffei},
+    title     = {{Web Platform Threats: Automated Detection of Web Security Issues With WPT}},
+    booktitle = {33rd {USENIX} Security Symposium},
+    year      = {2024}
+}
