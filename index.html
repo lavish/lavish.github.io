@@ -51,11 +51,11 @@
 			<section id="service">
 				<h2>Recent Academic Service</h2>
 				<ul>
-					<li><a href="https://www.usenix.org/conference/usenixsecurity22">USENIX Security</a>, PC member (2025) and AEC member (2022)</li>
-					<li><a href="https://www.ieee-security.org/TC/SP2025/">IEEE S&amp;P</a>, IEEE Symposium on Security and Privacy. PC member (2024-2025)</li>
-					<li><a href="https://www.sigsac.org/ccs/CCS2024/">ACM CCS</a>, ACM Conference on Computer and Communications Security (CCS). PC member (2024)</li>
-					<li><a href="https://eurosp2025.ieee-security.org/">IEEE EuroS&amp;P</a>, IEEE European Symposium on Security and Privacy. PC member (2024-2025)</li>
+					<li><a href="https://www.ieee-security.org/TC/SP2025/">IEEE S&amp;P</a>, IEEE Symposium on Security and Privacy. PC member (2024-2026)</li>
+					<li><a href="https://www.usenix.org/conference/usenixsecurity25">USENIX Security</a>, PC member (2025) and AEC member (2022)</li>
 					<li><a href="https://madweb.work/">MADWeb</a>, Workshop on Measurements, Attacks, and Defenses for the Web, co-located with NDSS. PC member (2023-2024) and Co-chair (2025)</li>
+					<li><a href="https://eurosp2025.ieee-security.org/">IEEE EuroS&amp;P</a>, IEEE European Symposium on Security and Privacy. PC member (2024-2025)</li>
+					<li><a href="https://www.sigsac.org/ccs/CCS2024/">ACM CCS</a>, ACM Conference on Computer and Communications Security (CCS). PC member (2024)</li>
 					<li><a href="https://secweb.work/">SecWeb</a>, Workshop on Web Security, co-located with IEEE S&amp;P. PC member (20021-2023) and Co-chair (2024)</li>
 					<li><a href="https://www.acsac.org/">ACSAC</a>, Annual Computer Security Applications Conference (ACSAC). PC member (2023) - Best reviewer award</li>
 					<li><a href="https://wootconference.org/">WOOT</a>, Workshop on Offensive Technologies. PC member (2022-2023) and Artifact Reproducibility chair (2023)</li>
@@ -86,6 +86,18 @@
 			<section id="research">
 				<h2>Selected Publications</h2>
 				<ul>
+					<li>
+						<strong>TapTrap: Animation-Driven Tapjacking on Android</strong>. USENIX Security. 2025.<br>
+						P. Beer, M. Squarcina, S. Roth, M. Lindorfer.<br>
+						<details>
+							<summary>
+								<a class="paper-item" href="/data/papers/USENIX25_taptrap.pdf">paper</a> <a class="paper-item" href="/data/papers/USENIX25_taptrap.txt">bibtex</a> <a class="paper-item" href="https://taptrap.click/">website</a>
+							</summary>
+							<p>
+								Users interact with mobile devices under the assumption that the graphical user interface (GUI) accurately reflects their actions, a trust fundamental to the user experience. In this work, we present TapTrap, a novel attack that enables zero-permission apps to exploit UI animations to undermine this trust relationship. TapTrap can be used by a malicious app to stealthily bypass Android's permission system and gain access to sensitive data or execute destructive actions, such as wiping the device without user approval. Its impact extends beyond the Android ecosystem, enabling tapjacking and Web clickjacking. TapTrap is able to bypass existing tapjacking defenses, as those are targeted toward overlays. Our novel approach, instead, abuses activity transition animations and is effective even on Android 15. We analyzed 99,705 apps from the Play Store to assess whether TapTrap is actively exploited in the wild. Our analysis found no evidence of such exploitation. Additionally, we conducted a large-scale study on these apps and discovered that 76.3% of apps are vulnerable to TapTrap. Finally, we evaluated the real-world feasibility of TapTrap through a user study with 20 participants, showing that all of them failed to notice at least one attack variant. Our findings have resulted in two assigned CVEs.
+							</p>
+						</details>
+					</li>
 					<li>
 						<strong>Web Platform Threats: Automated Detection of Web Security Issues With WPT</strong>. USENIX Security. 2024.<br>
 						P. Bernardo, L. Veronese, V. Valle, S. Calzavara, M. Squarcina, P. Adão, M. Maffei.<br>

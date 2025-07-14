@@ -1,0 +1,9 @@
+@inproceedings{taptrap_beer,
+  author    = {Philipp Beer and Marco Squarcina and Sebastian Roth and Martina Lindorfer},
+  title     = {{TapTrap: Animation-Driven Tapjacking on Android}},
+  booktitle = {34th USENIX Security Symposium (USENIX Security 25)},
+  year      = {2025},
+  address   = {Seattle, WA},
+  publisher = {USENIX Association},
+  month     = aug
+}
