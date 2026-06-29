@@ -1,0 +1,9 @@
+@inproceedings{autofail_lamarca,
+  author    = {Riccardo Lamarca and Philipp Beer and Marco Squarcina},
+  title     = {{AutoFail: Breaking Web Boundaries using Android's Autofill Framework}},
+  booktitle = {35th USENIX Security Symposium (USENIX Security 26)},
+  year      = {2026},
+  address   = {Baltimore, MD},
+  publisher = {USENIX Association},
+  month     = aug
+}

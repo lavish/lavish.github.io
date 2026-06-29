@@ -110,7 +110,7 @@
 						P. Beer, S. Roth, M. Lindorfer, M. Squarcina.<br>
 						<details>
 							<summary>
-								<a class="paper-item" href="/data/papers/USENIX26_plaintext.txt">bibtex</a>
+								<a class="paper-item" href="/data/papers/USENIX26_webviews.pdf">paper</a> <a class="paper-item" href="/data/papers/USENIX26_webviews.txt">bibtex</a>
 							</summary>
 							<p>
 								While the widespread adoption of HTTPS and browser-based visual warnings for HTTP content has largely mitigated machine-in-the-middle (MitM) attacks on the traditional Web, the mobile ecosystem presents a different situation. Web content embedded via the Android WebView component commonly lacks these built-in visual security indicators and grants apps granular control over transport-layer security. This flexibility raises a critical question: does the mobile-Web ecosystem keep up with the advancements of the modern Web?
@@ -129,30 +129,6 @@
 							</summary>
 							<p>
 								Traditional web tracking techniques rely on unique identifiers set in the client-side storage and shared with third-party trackers through network requests. Ideally, this phenomenon may be investigated through the classic lens of information flow control, e.g., by using instrumented browsers with taint tracking support. As a matter of fact though, most web privacy research makes use of simple syntactic matching heuristics that merely look for the presence of (possibly transformed) client-side identifiers within network requests, with no visibility of the JavaScript logic. In this work, we perform a comparative study of these two approaches to web tracking detection. Our investigation shows that taint tracking can expose tracking behavior that remains undetected by syntactic matching heuristics, which suffer from a significant number of false positives and false negatives. However, we also show that taint tracking is not strictly superior to syntactic matching, due to a range of different reasons, including the current limitations of state-of-the-art implementations and the complexity of real-world tracking behavior. Overall, we advocate for a critical reflection on the shortcomings of prominent web tracking detection approaches and we propose useful methodologies to improve current measurement practices.
-							</p>
-						</details>
-					</li>
-					<li>
-						<strong>TapTrap: Animation-Driven Tapjacking on Android</strong>. USENIX Security. 2025.<br>
-						P. Beer, M. Squarcina, S. Roth, M. Lindorfer.<br>
-						<details>
-							<summary>
-								<a class="paper-item" href="/data/papers/USENIX25_taptrap.pdf">paper</a> <a class="paper-item" href="/data/papers/USENIX25_taptrap.txt">bibtex</a> <a class="paper-item" href="https://taptrap.click/">website</a>
-							</summary>
-							<p>
-								Users interact with mobile devices under the assumption that the graphical user interface (GUI) accurately reflects their actions, a trust fundamental to the user experience. In this work, we present TapTrap, a novel attack that enables zero-permission apps to exploit UI animations to undermine this trust relationship. TapTrap can be used by a malicious app to stealthily bypass Android's permission system and gain access to sensitive data or execute destructive actions, such as wiping the device without user approval. Its impact extends beyond the Android ecosystem, enabling tapjacking and Web clickjacking. TapTrap is able to bypass existing tapjacking defenses, as those are targeted toward overlays. Our novel approach, instead, abuses activity transition animations and is effective even on Android 15. We analyzed 99,705 apps from the Play Store to assess whether TapTrap is actively exploited in the wild. Our analysis found no evidence of such exploitation. Additionally, we conducted a large-scale study on these apps and discovered that 76.3% of apps are vulnerable to TapTrap. Finally, we evaluated the real-world feasibility of TapTrap through a user study with 20 participants, showing that all of them failed to notice at least one attack variant. Our findings have resulted in two assigned CVEs.
-							</p>
-						</details>
-					</li>
-					<li>
-						<strong>TapTrap: Animation-Driven Tapjacking on Android</strong>. USENIX Security. 2025.<br>
-						P. Beer, M. Squarcina, S. Roth, M. Lindorfer.<br>
-						<details>
-							<summary>
-								<a class="paper-item" href="/data/papers/USENIX25_taptrap.pdf">paper</a> <a class="paper-item" href="/data/papers/USENIX25_taptrap.txt">bibtex</a> <a class="paper-item" href="https://taptrap.click/">website</a>
-							</summary>
-							<p>
-								Users interact with mobile devices under the assumption that the graphical user interface (GUI) accurately reflects their actions, a trust fundamental to the user experience. In this work, we present TapTrap, a novel attack that enables zero-permission apps to exploit UI animations to undermine this trust relationship. TapTrap can be used by a malicious app to stealthily bypass Android's permission system and gain access to sensitive data or execute destructive actions, such as wiping the device without user approval. Its impact extends beyond the Android ecosystem, enabling tapjacking and Web clickjacking. TapTrap is able to bypass existing tapjacking defenses, as those are targeted toward overlays. Our novel approach, instead, abuses activity transition animations and is effective even on Android 15. We analyzed 99,705 apps from the Play Store to assess whether TapTrap is actively exploited in the wild. Our analysis found no evidence of such exploitation. Additionally, we conducted a large-scale study on these apps and discovered that 76.3% of apps are vulnerable to TapTrap. Finally, we evaluated the real-world feasibility of TapTrap through a user study with 20 participants, showing that all of them failed to notice at least one attack variant. Our findings have resulted in two assigned CVEs.
 							</p>
 						</details>
 					</li>

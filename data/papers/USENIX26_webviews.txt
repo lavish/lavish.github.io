@@ -1,0 +1,9 @@
+@inproceedings{webviews_beer,
+  author    = {Philipp Beer and Sebastian Roth and Martina Lindorfer and Marco Squarcina},
+  title     = {{Plain Text, Plain Risks: Measuring and Understanding HTTP Inclusion in Android WebViews at Scale}},
+  booktitle = {35th USENIX Security Symposium (USENIX Security 26)},
+  year      = {2026},
+  address   = {Baltimore, MD},
+  publisher = {USENIX Association},
+  month     = aug
+}

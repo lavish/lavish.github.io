@@ -1,0 +1,9 @@
+@inproceedings{tracking_calzavara,
+  author    = {Stefano Calzavara and Samuele Casarin and Marco Squarcina and Matteo Maffei},
+  title     = {{From Syntactic Matching to Taint Tracking and Back: A Comparative Study of Web Tracking Detection Techniques}},
+  booktitle = {Proceedings of the 26th Privacy Enhancing Technologies Symposium (PETS 2026)},
+  year      = {2026},
+  address   = {Calgary, Canada},
+  publisher = {PoPETs},
+  month     = jul
+}
